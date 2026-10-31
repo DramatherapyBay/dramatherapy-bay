@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Dramatherapy Bay Limited</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] } } } }
+  </script>
+  <style>
+    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-btn flex items-center justify-center text-white shadow-md">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+        </div>
+        <div><span class="text-xl font-bold text-gray-900 block leading-none">Dramatherapy Bay</span><span class="text-xs text-gray-500">Limited</span></div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
+        <a href="index.html" class="hover:text-emerald-600">Home</a>
+        <a href="about-dramatherapy.html" class="hover:text-emerald-600">About Dramatherapy</a>
+        <a href="about-lily.html" class="hover:text-emerald-600">About Lily</a>
+        <a href="services.html" class="hover:text-emerald-600">Services</a>
+        <a href="resources.html" class="hover:text-emerald-600">Resources</a>
+        <a href="contact.html" class="text-emerald-600 font-bold">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">Book Consultation</a>
+    </div>
+  </header>
+
+  <main class="py-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 text-center">
+      <span class="text-emerald-600 font-bold uppercase tracking-wider text-xs bg-emerald-50 px-3 py-1 rounded-full">Get in Touch</span>
+      <h1 class="text-3xl font-extrabold text-gray-900 mt-3 mb-4">Book a Consultation</h1>
+      <p class="text-gray-600 mb-8">
+        Take the first step towards creative self-exploration. Reach out to arrange a confidential consultation or ask any questions.
+      </p>
+
+      <div class="space-y-4 mb-8 text-left bg-gray-50 p-6 rounded-2xl inline-block w-full max-w-md">
+        <p class="text-gray-700 text-sm"><strong>Telephone:</strong> 01223 912627</p>
+        <p class="text-gray-700 text-sm"><strong>Email:</strong> <a href="mailto:dramatherapybay@gmail.com" class="text-emerald-600 underline">dramatherapybay@gmail.com</a></p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <a href="mailto:dramatherapybay@gmail.com" class="w-full sm:w-auto px-8 py-3.5 rounded-full text-base font-bold text-white bg-gradient-btn shadow-md hover:opacity-95 transition">
+          Email Lily Directly
+        </a>
+      </div>
+
+      <!-- Social & Professional Links -->
+      <div class="pt-6 border-t border-gray-100 flex flex-wrap items-center justify-center gap-4">
+        <a href="https://www.psychologytoday.com/gb/counselling/lily-lau-dramatherapy-bay-limited-cambridge/1492428" target="_blank" class="px-5 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold transition flex items-center gap-2">
+          <span>Psychology Today</span>
+        </a>
+        <a href="https://www.instagram.com/dramatherapybay/" target="_blank" class="px-5 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-800 text-xs font-semibold transition flex items-center gap-2">
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-center text-xs">
+    <p>&copy; 2026 Dramatherapy Bay Limited | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
+  </footer>
+</body>
+</html>
