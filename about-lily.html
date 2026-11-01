@@ -4,57 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Lily - Dramatherapy Bay Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] } } } }
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
   </script>
   <style>
     .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
     .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .bg-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #F0FDF4 50%, #FAF5FF 100%); }
+    .card-gradient-banner { background: linear-gradient(135deg, #10B981 0%, #6366F1 50%, #A855F7 100%); }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-full bg-gradient-btn flex items-center justify-center text-white shadow-md">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
         </div>
-        <div><span class="text-xl font-bold text-gray-900 block leading-none">Dramatherapy Bay</span><span class="text-xs text-gray-500">Limited</span></div>
+        <div>
+          <span class="text-xl font-bold text-gray-900 tracking-tight block leading-none">Dramatherapy Bay</span>
+          <span class="text-xs text-gray-500 font-medium">Limited</span>
+        </div>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
-        <a href="index.html" class="hover:text-emerald-600">Home</a>
-        <a href="about-dramatherapy.html" class="hover:text-emerald-600">About Dramatherapy</a>
+        <a href="index.html" class="hover:text-emerald-600 transition">Home</a>
+        <a href="about-dramatherapy.html" class="hover:text-emerald-600 transition">About Dramatherapy</a>
         <a href="about-lily.html" class="text-emerald-600 font-bold">About Lily</a>
-        <a href="services.html" class="hover:text-emerald-600">Services</a>
-        <a href="resources.html" class="hover:text-emerald-600">Resources</a>
-        <a href="contact.html" class="hover:text-emerald-600">Contact</a>
+        <a href="services.html" class="hover:text-emerald-600 transition">Services</a>
+        <a href="resources.html" class="hover:text-emerald-600 transition">Resources</a>
+        <a href="contact.html" class="hover:text-emerald-600 transition">Contact</a>
       </nav>
-      <a href="contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">Book Consultation</a>
+      <a href="contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md hover:opacity-95 transition">Book Consultation</a>
     </div>
   </header>
 
-  <main class="py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-5 flex justify-center">
-        <!-- Frameless Circle Photo correctly linked to DSC01224-Enhanced-NR-min.jpg -->
-        <div class="w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-xl border-4 border-emerald-50">
-          <img src="DSC01224-Enhanced-NR-min.jpg" alt="Lily Lau - Dramatherapist" class="w-full h-full object-cover">
+  <main class="bg-calm-gradient py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Profile Header Card -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-5 flex justify-center">
+          <div class="w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-xl border-4 border-emerald-50 bg-emerald-100 flex items-center justify-center">
+            <img src="DSC01224-Enhanced-NR-min.jpg" alt="Lily Lau - Dramatherapist" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="md:col-span-7 space-y-3 text-center md:text-left">
+          <span class="text-emerald-600 font-bold uppercase tracking-wider text-xs bg-emerald-50 px-3 py-1 rounded-full">Practitioner Profile</span>
+          <h1 class="text-3xl font-extrabold text-gray-900">Lily Lau</h1>
+          <p class="text-emerald-700 font-semibold text-sm">HCPC Registered Arts Therapist (Dramatherapist)</p>
+          <p class="text-gray-600 text-sm leading-relaxed pt-2">
+            Founder of Dramatherapy Bay Ltd and a British registered dramatherapist, offering compassionate, professional and psychologically informed dramatherapy services in Cambridge and online.
+          </p>
         </div>
       </div>
-      <div class="md:col-span-7 space-y-4 text-center md:text-left">
-        <span class="text-emerald-600 font-bold uppercase tracking-wider text-xs bg-emerald-50 px-3 py-1 rounded-full">Practitioner Profile</span>
-        <h1 class="text-3xl font-extrabold text-gray-900">Lily Lau</h1>
-        <p class="text-emerald-700 font-semibold text-sm">HCPC Registered Arts Therapist (Dramatherapist)</p>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          As founder of Dramatherapy Bay Ltd, Lily provides compassionate, professional, and psychologically informed dramatherapy services in Cambridge and online. Working in adult psychological services within the NHS, Lily brings extensive clinical experience supporting individuals through emotional distress, life transitions, and self-discovery.
+
+      <!-- Professional Background Section -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 space-y-6">
+        <h2 class="text-2xl font-extrabold text-gray-900 border-b border-gray-100 pb-4">Professional Background</h2>
+        
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          Alongside her private practice, Lily works within NHS adult psychological services, bringing extensive clinical experience in supporting individuals with complex mental health needs, emotional distress and significant life transitions. Her work spans a range of psychological difficulties and diverse personal circumstances, informing a thoughtful and adaptable therapeutic approach.
+        </p>
+
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          Originally from Hong Kong, Lily brings a multicultural perspective to her practice, with an appreciation of how culture, identity, personal experiences and individual circumstances shape the way we understand and express ourselves. She has a particular interest in working with diverse populations and creating inclusive therapeutic spaces where people feel respected, understood and supported.
+        </p>
+
+        <!-- Multicultural Expertise Bubble / Highlight Box -->
+        <div class="bg-emerald-50/70 border border-emerald-100 rounded-2xl p-6 text-center my-6">
+          <h3 class="text-sm font-bold text-emerald-900 uppercase tracking-wider mb-1">Multicultural Expertise</h3>
+          <p class="text-sm text-emerald-800 font-medium">Trilingual practice in English, Cantonese, and Mandarin</p>
+        </div>
+
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          Drawing on drama, creativity and psychological understanding, Lily offers opportunities to explore emotions, experiences and relationships through both verbal and non-verbal expression. Her approach is grounded in empathy, cultural sensitivity and respect for each individual's unique experiences, working collaboratively and at a pace that feels right for them.
+        </p>
+
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          Lily is passionate about making psychological support more accessible and meaningful, recognising that there is no single way to express, understand or work through life's challenges.
         </p>
       </div>
+
+      <!-- Therapeutic Philosophy -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 text-center space-y-4">
+        <h2 class="text-xl font-bold text-gray-900">Therapeutic Philosophy</h2>
+        <blockquote class="text-base sm:text-lg text-gray-700 italic font-medium max-w-2xl mx-auto leading-relaxed">
+          "I believe in the inherent capacity for healing that exists within every person. Through creative expression and collaborative therapeutic work, we can unlock potential for growth and transformation."
+        </blockquote>
+      </div>
+
+      <!-- Areas of Specialization -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Areas of Specialization</h2>
+          <p class="text-sm text-gray-600">Lily has extensive experience working with diverse populations and complex mental health conditions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50/80 p-6 rounded-2xl border border-gray-100 text-sm text-gray-700">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Young people with special educational needs (SEN)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Autism spectrum disorder (ASD)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Eating disorders</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Complex post-traumatic stress disorder (C-PTSD)</div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Attention Deficit Hyperactivity Disorder (ADHD)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Emotionally Unstable Personality Disorder (EUPD)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Older people with dementia</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beyond the Practice & Fun Fact (Styled like The Therapeutic Process banner) -->
+      <div class="card-gradient-banner rounded-3xl p-8 sm:p-12 text-white shadow-xl space-y-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-extrabold mb-3">Beyond the Practice</h2>
+          <p class="text-emerald-100 text-sm leading-relaxed">
+            Lily believes in maintaining a balanced lifestyle that enriches both her personal well-being and professional practice.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-xs sm:text-sm font-semibold">Taekwondo (Registered Coach & Referee)</div>
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-xs sm:text-sm font-semibold">Swimming & Cycling</div>
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-xs sm:text-sm font-semibold">Badminton</div>
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-xs sm:text-sm font-semibold">Gardening</div>
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-xs sm:text-sm font-semibold">Learning British Sign Language</div>
+          <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-xs sm:text-sm font-semibold">Community Volunteering</div>
+        </div>
+
+        <div class="bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center space-y-2">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-300">Fun Fact</h3>
+          <p class="text-xs sm:text-sm text-white/90">
+            Lily is also a registered Taekwondo coach and referee, bringing discipline and mindfulness practices into her therapeutic work.
+          </p>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-center text-xs">
-    <p>&copy; 2026 Dramatherapy Bay Limited | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12 text-center text-xs">
+    <p>&copy; 2026 Dramatherapy Bay Limited. All rights reserved. | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
   </footer>
+
 </body>
 </html>
