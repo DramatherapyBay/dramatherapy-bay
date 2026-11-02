@@ -55,7 +55,6 @@
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
   <!-- Header / Navigation -->
-  <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
@@ -69,7 +68,6 @@
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
         <a href="index.html" class="text-emerald-600 font-bold">Home</a>
-        
         <a href="about-lily.html" class="hover:text-emerald-600 transition">About Lily</a>
         <a href="services.html" class="hover:text-emerald-600 transition">Services</a>
         <a href="resources.html" class="hover:text-emerald-600 transition">Resources</a>
@@ -87,9 +85,8 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
       <a href="index.html" class="block py-2 text-base font-bold text-emerald-600">Home</a>
-    
       <a href="about-lily.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">About Lily</a>
       <a href="services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Services</a>
       <a href="resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Resources</a>
@@ -97,8 +94,8 @@
       <a href="contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">Book Consultation</a>
     </div>
   </header>
+
   <!-- Hero Section -->
- <!-- Hero Section -->
   <section class="relative py-16 lg:py-24 bg-gradient-to-b from-slate-50 to-white scroll-animate">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -125,7 +122,7 @@
           </div>
         </div>
 
-        <!-- Right Column: Hero Image with rounded corners & uncropped logo/image file -->
+        <!-- Right Column: Hero Image -->
         <div class="lg:col-span-6 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none p-2">
             <img src="DSC01184-Enhanced-NR.jpg" alt="Lily Lau - Dramatherapist" class="w-full h-full object-cover rounded-3xl shadow-xl">
@@ -133,10 +130,6 @@
             <div class="absolute -top-6 -right-6 w-32 h-32 bg-purple-100/50 rounded-full blur-2xl -z-10"></div>
           </div>
         </div>
-
-      </div>
-    </div>
-  </section>
 
       </div>
     </div>
@@ -164,14 +157,11 @@
           <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
            Dramatherapy Bay takes inspiration from this idea: a welcoming space to step back, reflect, explore what matters and consider where you might wish to go next.
           </p>
-         <p class="text-sm sm:text-base leading-relaxed pt-1">
-  <a href="about-dramatherapy.html" class="font-bold text-emerald-700 hover:text-emerald-800 hover:underline transition">
-    Curious about the thinking behind our name and approach? →
-  </a>
-</p>
-     
+          <p class="text-sm sm:text-base leading-relaxed pt-1">
+            <a href="about-dramatherapy.html" class="font-bold text-emerald-700 hover:text-emerald-800 hover:underline transition">
+              Curious about the thinking behind our name and approach? →
+            </a>
           </p>
-          
         </div>
       </div>
     </div>
@@ -323,7 +313,7 @@
     <p>&copy; 2026 Dramatherapy Bay Limited | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
   </footer>
 
-  <!-- Scroll Animation Script -->
+  <!-- Scroll Animation Script & Mobile Menu Toggle -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const observerOptions = {
@@ -346,8 +336,8 @@
         observer.observe(el);
       });
     });
-  </script>
-  <script>
+
+    // Mobile Navigation Toggle
     document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
