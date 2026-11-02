@@ -23,9 +23,7 @@
     .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
     .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .bg-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #F0FDF4 50%, #FAF5FF 100%); }
-    /* Softened and brightened gradient for Beyond the Practice to avoid aggressive tones */
     .card-gradient-banner { background: linear-gradient(135deg, #34D399 0%, #818CF8 50%, #C084FC 100%); }
-    /* Soft glowing card effect for Areas of Specialization */
     .special-card-bg { background: linear-gradient(135deg, rgba(240,253,244,0.6) 0%, rgba(245,243,255,0.6) 100%); }
 
     /* Scroll Animation Transition States */
@@ -46,13 +44,15 @@
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-     <a href="index.html" class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3">
         <img src="Untitled design (2).png" alt="Dramatherapy Bay Logo" class="h-16 sm:h-20 w-auto object-contain py-1">
         <div>
           <span class="text-xl font-bold text-gray-900 tracking-tight block leading-none">Dramatherapy Bay</span>
           <span class="text-xs text-gray-500 font-medium">Limited</span>
         </div>
       </a>
+      
+      <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
         <a href="index.html" class="hover:text-emerald-600 transition">Home</a>
         <a href="about-dramatherapy.html" class="hover:text-emerald-600 transition">About Dramatherapy</a>
@@ -61,7 +61,26 @@
         <a href="resources.html" class="hover:text-emerald-600 transition">Resources</a>
         <a href="contact.html" class="hover:text-emerald-600 transition">Contact</a>
       </nav>
+      
       <a href="contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md hover:opacity-95 transition">Book Consultation</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="index.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Home</a>
+      <a href="about-dramatherapy.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">About Dramatherapy</a>
+      <a href="about-lily.html" class="block py-2 text-base font-bold text-emerald-600">About Lily</a>
+      <a href="services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Services</a>
+      <a href="resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Resources</a>
+      <a href="contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Contact</a>
+      <a href="contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">Book Consultation</a>
     </div>
   </header>
 
@@ -79,29 +98,20 @@
       <!-- Side-by-Side Layout: Photo Card on Left, Professional Background on Right -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-animate">
         
-      <!-- Left: Photo Card with 3D shadow & 5 Stars -->
-        <!-- Side-by-Side Layout: Photo Card on Left, Professional Background on Right -->
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-animate">
-    
-    <!-- Left: Photo Card with 3D shadow & 5 Stars -->
-    <div class="lg:col-span-4 bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-lg border border-emerald-100/50 text-center space-y-4">
-      <div class="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full overflow-hidden shadow-xl border-4 border-emerald-50 bg-emerald-100 flex items-center justify-center">
-        <img src="DSC01224-Enhanced-NR-min.jpg" alt="Lily Lau - Dramatherapist" class="w-full h-full object-cover">
-      </div>
-      <div class="space-y-2">
-        <h3 class="font-bold text-gray-900 text-lg">Lily Lau</h3>
-        <!-- 5 Star Google Reviews style rating -->
-        <div class="flex justify-center text-amber-400 text-sm space-x-1">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <!-- Left: Photo Card with 3D shadow & 5 Stars -->
+        <div class="lg:col-span-4 bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-lg border border-emerald-100/50 text-center space-y-4">
+          <div class="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full overflow-hidden shadow-xl border-4 border-emerald-50 bg-emerald-100 flex items-center justify-center">
+            <img src="DSC01224-Enhanced-NR-min.jpg" alt="Lily Lau - Dramatherapist" class="w-full h-full object-cover">
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-bold text-gray-900 text-lg">Lily Lau</h3>
+            <!-- 5 Star Google Reviews style rating -->
+            <div class="flex justify-center text-amber-400 text-sm space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-xs font-semibold text-emerald-700 pt-1">HCPC Registered Arts Therapist (Dramatherapist)</p>
+          </div>
         </div>
-        <p class="text-xs font-semibold text-emerald-700 pt-1">HCPC Registered Arts Therapist (Dramatherapist)</p>
-      </div>
-    </div>
-
-    <!-- Right: Professional Background Content -->
-    <div class="lg:col-span-8 space-y-6 bg-white/80 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-sm">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Professional Background</h2>
-      <!-- (Your existing professional background text paragraphs follow here) -->
 
         <!-- Right: Professional Background Text -->
         <div class="lg:col-span-8 bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-lg border border-emerald-100/50 space-y-5">
@@ -122,7 +132,7 @@
 
       </div>
 
-      <!-- Multicultural Expertise (Multilingual Services Card Grid Style) -->
+      <!-- Multicultural Expertise -->
       <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-sm border border-gray-100 text-center space-y-8 scroll-animate">
         <div>
           <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Multicultural Expertise</h2>
@@ -159,7 +169,7 @@
         </blockquote>
       </div>
 
-      <!-- Areas of Specialization (With Smooth Fading Background Box) -->
+      <!-- Areas of Specialization -->
       <div class="special-card-bg rounded-3xl p-8 sm:p-12 shadow-sm border border-emerald-100/60 scroll-animate">
         <div class="text-center max-w-2xl mx-auto mb-10">
           <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Areas of Specialization</h2>
@@ -181,7 +191,7 @@
         </div>
       </div>
 
-      <!-- Beyond the Practice & Fun Fact (Brightened, Softened Gradient Banner) -->
+      <!-- Beyond the Practice & Fun Fact -->
       <div class="card-gradient-banner rounded-3xl p-8 sm:p-12 text-white shadow-xl space-y-8 scroll-animate">
         <div class="text-center max-w-2xl mx-auto">
           <h2 class="text-3xl font-extrabold mb-3 text-white">Beyond the Practice</h2>
@@ -215,8 +225,9 @@
     <p>&copy; 2026 Dramatherapy Bay Limited. All rights reserved. | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
   </footer>
 
-  <!-- Scroll Animation Script -->
+  <!-- Scripts -->
   <script>
+    // Scroll animation observer
     document.addEventListener("DOMContentLoaded", function () {
       const observerOptions = {
         root: null,
@@ -237,6 +248,12 @@
       document.querySelectorAll('.scroll-animate').forEach(el => {
         observer.observe(el);
       });
+    });
+
+    // Mobile Navigation Toggle
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
     });
   </script>
 
