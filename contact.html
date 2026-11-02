@@ -144,6 +144,26 @@
 
     </div>
 
+    <!-- Contact Form Section -->
+    <div class="bg-white/90 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-emerald-100/50 shadow-sm max-w-3xl mx-auto scroll-animate">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Send a Message</h2>
+      <form action="https://formspree.io/f/xvgznqjq" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Your Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Your Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Your Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl text-white font-semibold bg-gradient-btn shadow-md hover:opacity-95 transition">Send Message</button>
+      </form>
+    </div>
+
     <!-- Social Links Pill Buttons -->
     <div class="pt-4 border-t border-slate-200/60 flex flex-wrap items-center justify-center gap-3 scroll-animate">
       <a href="https://www.linkedin.com/in/lily-yim-ching-l-75755618a/" target="_blank" class="px-4 py-2 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-gray-700 text-xs font-semibold shadow-sm transition flex items-center gap-2">
