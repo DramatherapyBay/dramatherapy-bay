@@ -27,6 +27,18 @@
     .card-gradient-banner { background: linear-gradient(135deg, #34D399 0%, #818CF8 50%, #C084FC 100%); }
     /* Soft glowing card effect for Areas of Specialization */
     .special-card-bg { background: linear-gradient(135deg, rgba(240,253,244,0.6) 0%, rgba(245,243,255,0.6) 100%); }
+
+    /* Scroll Animation Transition States */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .scroll-animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -57,15 +69,15 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       
       <!-- Top Centered Name & Title with Gradient Effect -->
-      <div class="text-center space-y-2">
-    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
-  About <span class="text-gradient">Lily Lau</span>
-</h1>
+      <div class="text-center space-y-2 scroll-animate">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          About <span class="text-gradient">Lily Lau</span>
+        </h1>
         <p class="text-emerald-700 font-semibold text-base sm:text-lg">HCPC Registered Arts Therapist (Dramatherapist)</p>
       </div>
 
       <!-- Side-by-Side Layout: Photo Card on Left, Professional Background on Right -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-animate">
         
         <!-- Left: Photo Card with 3D shadow & 5 Stars -->
         <div class="lg:col-span-4 bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-lg border border-emerald-100/50 text-center space-y-4">
@@ -102,7 +114,7 @@
       </div>
 
       <!-- Multicultural Expertise (Multilingual Services Card Grid Style) -->
-      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-sm border border-gray-100 text-center space-y-8">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-sm border border-gray-100 text-center space-y-8 scroll-animate">
         <div>
           <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Multicultural Expertise</h2>
           <p class="text-sm text-gray-600">Trilingual practice ensuring cultural sensitivity and accessibility for diverse communities.</p>
@@ -131,7 +143,7 @@
       </div>
 
       <!-- Therapeutic Philosophy -->
-      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 text-center space-y-4">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 text-center space-y-4 scroll-animate">
         <h2 class="text-xl font-bold text-gray-900">Therapeutic Philosophy</h2>
         <blockquote class="text-base sm:text-lg text-gray-700 italic font-medium max-w-2xl mx-auto leading-relaxed">
           "I believe in the inherent capacity for healing that exists within every person. Through creative expression and collaborative therapeutic work, we can unlock potential for growth and transformation."
@@ -139,7 +151,7 @@
       </div>
 
       <!-- Areas of Specialization (With Smooth Fading Background Box) -->
-      <div class="special-card-bg rounded-3xl p-8 sm:p-12 shadow-sm border border-emerald-100/60">
+      <div class="special-card-bg rounded-3xl p-8 sm:p-12 shadow-sm border border-emerald-100/60 scroll-animate">
         <div class="text-center max-w-2xl mx-auto mb-10">
           <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Areas of Specialization</h2>
           <p class="text-sm text-gray-600">Lily has extensive experience working with diverse populations and complex mental health conditions.</p>
@@ -161,7 +173,7 @@
       </div>
 
       <!-- Beyond the Practice & Fun Fact (Brightened, Softened Gradient Banner) -->
-      <div class="card-gradient-banner rounded-3xl p-8 sm:p-12 text-white shadow-xl space-y-8">
+      <div class="card-gradient-banner rounded-3xl p-8 sm:p-12 text-white shadow-xl space-y-8 scroll-animate">
         <div class="text-center max-w-2xl mx-auto">
           <h2 class="text-3xl font-extrabold mb-3 text-white">Beyond the Practice</h2>
           <p class="text-emerald-50 text-sm leading-relaxed">
@@ -193,6 +205,31 @@
   <footer class="bg-gray-900 text-gray-400 py-12 text-center text-xs">
     <p>&copy; 2026 Dramatherapy Bay Limited. All rights reserved. | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
   </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 
 </body>
 </html>
