@@ -11,6 +11,18 @@
   <style>
     .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
     .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* Scroll Animation Transition States */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .scroll-animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -36,7 +48,7 @@
 
   <main class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Main Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
+    <div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
       <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Our <span class="text-gradient">Services</span></h1>
       <p class="text-gray-600 text-base leading-relaxed mb-8">
         Comprehensive dramatherapy services designed to support your journey toward healing, growth, and emotional well-being.
@@ -49,7 +61,7 @@
     </div>
 
     <!-- Four Main Categories in a Clean Grid (Same level layout) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 scroll-animate">
       
       <!-- Category 1 -->
       <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between">
@@ -127,7 +139,7 @@
     </div>
 
     <!-- Centered Specialized Treatment Section -->
-    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm text-center">
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm text-center scroll-animate">
       <div class="max-w-2xl mx-auto mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-2">Specialized Treatment for Eating Disorders</h2>
         <p class="text-sm text-gray-600">Comprehensive treatment approach combining multiple evidence-based modalities for eating disorder recovery.</p>
@@ -155,8 +167,33 @@
     </div>
   </main>
 
-  <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-center text-xs">
+  <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
     <p>&copy; 2026 Dramatherapy Bay Limited | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
   </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
