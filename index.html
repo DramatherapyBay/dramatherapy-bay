@@ -1,323 +1,509 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dramatherapy Bay Limited - Professional Dramatherapy Services</title>
+
+  <title>The Philosophy Behind Dramatherapy Bay | Our Approach</title>
+  <meta name="description" content="Discover the philosophy behind Dramatherapy Bay: a welcoming space to pause, reflect, explore emotions and find your own way forward through creativity and therapeutic exploration.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
         }
       }
     }
   </script>
+
   <style>
-    @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .animate-fade-in-left { animation: fadeInLeft 0.8s ease-out forwards; }
-    .animate-fade-in-right { animation: fadeInRight 0.8s ease-out forwards; }
-    .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
 
-    /* Scroll Animation Transition States */
     .scroll-animate {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
       will-change: opacity, transform;
     }
+
     .scroll-animate.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
-    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .bg-hero-pattern { background: linear-gradient(180deg, #F0FDF4 0%, #F5F3FF 100%); }
+    .bg-gradient-btn {
+      background: linear-gradient(135deg, #10B981 0%, #A855F7 100%);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #059669 0%, #7C3AED 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bg-hero-pattern {
+      background: linear-gradient(180deg, #F0FDF4 0%, #F5F3FF 100%);
+    }
+
+    .philosophy-image {
+      background: linear-gradient(180deg, #F0FDF4 0%, #F5F3FF 100%);
+    }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
   <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
       <a href="index.html" class="flex items-center gap-3">
-        <img src="Untitled design (2).png" alt="Dramatherapy Bay Logo" class="h-16 sm:h-20 w-auto object-contain py-1">
+        <img
+          src="Untitled design (2).png"
+          alt="Dramatherapy Bay Logo"
+          class="h-16 sm:h-20 w-auto object-contain py-1"
+        >
+
         <div>
-          <span class="text-xl font-bold text-gray-900 tracking-tight block leading-none">Dramatherapy Bay</span>
+          <span class="text-xl font-bold text-gray-900 tracking-tight block leading-none">
+            Dramatherapy Bay
+          </span>
           <span class="text-xs text-gray-500 font-medium">Limited</span>
         </div>
       </a>
 
-    <!-- Desktop Navigation -->
+      <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
-        <a href="index.html" class="text-emerald-600 font-bold">Home</a>
-        <a href="about-dramatherapy.html" class="hover:text-emerald-600 transition">About Dramatherapy</a>
-        <a href="about-lily.html" class="hover:text-emerald-600 transition">About Lily</a>
-        <a href="services.html" class="hover:text-emerald-600 transition">Services</a>
-        <a href="resources.html" class="hover:text-emerald-600 transition">Resources</a>
-        <a href="contact.html" class="hover:text-emerald-600 transition">Contact</a>
+
+        <a href="index.html" class="hover:text-emerald-600 transition">
+          Home
+        </a>
+
+        <a href="about-dramatherapy.html" class="text-emerald-600 font-bold">
+          About Dramatherapy
+        </a>
+
+        <a href="about-lily.html" class="hover:text-emerald-600 transition">
+          About Lily
+        </a>
+
+        <a href="services.html" class="hover:text-emerald-600 transition">
+          Services
+        </a>
+
+        <a href="resources.html" class="hover:text-emerald-600 transition">
+          Resources
+        </a>
+
+        <a href="contact.html" class="hover:text-emerald-600 transition">
+          Contact
+        </a>
+
       </nav>
 
-      <a href="contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md hover:opacity-95 transition">Book Consultation</a>
+      <a
+        href="contact.html"
+        class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md hover:opacity-95 transition"
+      >
+        Book Consultation
+      </a>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition">
+      <button
+        id="mobile-menu-btn"
+        aria-label="Toggle Navigation Menu"
+        aria-expanded="false"
+        class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition"
+      >
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16">
+          </path>
         </svg>
       </button>
+
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
-      <a href="index.html" class="block py-2 text-base font-bold text-emerald-600">Home</a>
-      <a href="about-dramatherapy.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">About Dramatherapy</a>
-      <a href="about-lily.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">About Lily</a>
-      <a href="services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Services</a>
-      <a href="resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Resources</a>
-      <a href="contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Contact</a>
-      <a href="contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">Book Consultation</a>
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3"
+    >
+
+      <a href="index.html" class="block py-2 text-base font-semibold text-gray-600">
+        Home
+      </a>
+
+      <a href="about-dramatherapy.html" class="block py-2 text-base font-bold text-emerald-600">
+        About Dramatherapy
+      </a>
+
+      <a href="about-lily.html" class="block py-2 text-base font-semibold text-gray-600">
+        About Lily
+      </a>
+
+      <a href="services.html" class="block py-2 text-base font-semibold text-gray-600">
+        Services
+      </a>
+
+      <a href="resources.html" class="block py-2 text-base font-semibold text-gray-600">
+        Resources
+      </a>
+
+      <a href="contact.html" class="block py-2 text-base font-semibold text-gray-600">
+        Contact
+      </a>
+
+      <a
+        href="contact.html"
+        class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md"
+      >
+        Book Consultation
+      </a>
+
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative py-16 lg:py-24 bg-gradient-to-b from-slate-50 to-white scroll-animate">
+
+  <!-- Philosophy Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-14 sm:py-20 lg:py-24">
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left Column: Text Content -->
-        <div class="lg:col-span-6 space-y-6">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
-            Dramatherapy <span class="text-gradient block mt-1 pb-2">Bay</span>
-          </h1>
-          <p class="text-emerald-700 font-bold text-base sm:text-lg">
-            A space to pause, explore and find your way forward.
-          </p>
-          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-            Dramatherapy and creative psychological support for emotional wellbeing, personal growth and life's challenges. Offering individual and group dramatherapy in Cambridge and online, alongside creative wellbeing workshops and programmes for organisations.
-          </p>
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="contact.html" class="px-6 py-3.5 rounded-2xl text-sm font-semibold text-white bg-gradient-btn shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:opacity-95 transform hover:-translate-y-0.5 transition duration-200 flex items-center gap-2">
-              Book Free Consultation
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-            <a href="about-dramatherapy.html" class="px-6 py-3.5 rounded-2xl text-sm font-semibold text-gray-700 bg-white border border-slate-200 hover:bg-slate-50 shadow-sm transition">
-              Learn More
-            </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Left Column: Philosophy Text -->
+        <div class="lg:col-span-7 space-y-6 animate-fade-in-up">
+
+          <div>
+            <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 px-4 py-2 rounded-full">
+              Our Philosophy
+            </span>
           </div>
+
+          <div class="space-y-3">
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+              The Philosophy Behind
+              <span class="text-gradient block">Dramatherapy Bay</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-emerald-700 font-semibold italic leading-relaxed">
+              A bay is a place to pause, not a place to stop.
+            </p>
+
+          </div>
+
+          <div class="space-y-5 text-gray-600 text-sm sm:text-base leading-relaxed">
+
+            <p>
+              A bay is a sheltered part of the coastline, offering boats somewhere to find refuge, pause and regain their bearings before continuing their journey.
+            </p>
+
+            <p>
+              Dramatherapy Bay takes inspiration from this idea: a welcoming space to step back, reflect, explore what matters and consider where you might wish to go next.
+            </p>
+
+            <p>
+              Life, much like the sea, is rarely still. There are calm waters, changing tides and unexpected waves. We cannot always control the conditions around us, nor do we need to fight against every wave that comes our way.
+            </p>
+
+            <p>
+              Sometimes, we need to find ways to adapt, allow ourselves to move with what life brings and discover different ways forward. At other times, we may need to hold our ground, find our direction or make changes that feel important to us.
+            </p>
+
+            <p>
+              We believe that moving forward does not always mean pushing harder. It can also mean pausing, listening to ourselves and finding the space to understand what we need.
+            </p>
+
+            <p>
+              Through therapeutic conversation, creativity and exploration, Dramatherapy Bay offers a space to reconnect with yourself, discover new perspectives and navigate life's experiences in your own way.
+            </p>
+
+          </div>
+
+          <!-- Closing Philosophy Statement -->
+          <div class="pt-2">
+
+            <div class="bg-gradient-btn rounded-2xl sm:rounded-3xl p-5 sm:p-6 shadow-lg shadow-emerald-500/10">
+
+              <div class="flex items-center gap-4">
+
+                <div class="flex-shrink-0">
+                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                      d="M2 12c4-5 8-5 12 0s8 5 8 0M2 17c4-5 8-5 12 0s8 5 8 0">
+                    </path>
+                  </svg>
+                </div>
+
+                <p class="text-white text-base sm:text-lg font-bold italic leading-relaxed">
+                  You don't have to control every wave to find your way through the water.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Right Column: Hero Image -->
-        <div class="lg:col-span-6 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none p-2">
-            <img src="DSC01184-Enhanced-NR.jpg" alt="Lily Lau - Dramatherapist" class="w-full h-full object-cover rounded-3xl shadow-xl">
-            <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-emerald-100/50 rounded-full blur-2xl -z-10"></div>
-            <div class="absolute -top-6 -right-6 w-32 h-32 bg-purple-100/50 rounded-full blur-2xl -z-10"></div>
+
+        <!-- Right Column: Coastal Image -->
+        <div class="lg:col-span-5 relative scroll-animate">
+
+          <div class="relative">
+
+            <div class="absolute -top-5 -right-5 w-32 h-32 bg-purple-200/50 rounded-full blur-3xl"></div>
+
+            <div class="absolute -bottom-5 -left-5 w-32 h-32 bg-emerald-200/50 rounded-full blur-3xl"></div>
+
+            <img
+              src="philosophy-coastal-bay.png"
+              alt="A peaceful coastal bay at sunset, with a sailboat resting on calm water"
+              class="relative w-full h-[420px] sm:h-[540px] lg:h-[680px] object-cover rounded-3xl shadow-xl"
+              loading="lazy"
+            >
+
+            <div class="absolute bottom-5 left-5 right-5 bg-white/85 backdrop-blur-md rounded-2xl p-4 shadow-lg">
+
+              <p class="text-gray-700 text-sm sm:text-base font-medium italic text-center leading-relaxed">
+                Sometimes the most meaningful step forward begins with giving ourselves permission to pause.
+              </p>
+
+            </div>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- The Story Behind Dramatherapy Bay Section -->
-  <section class="py-16 bg-emerald-50/50 border-y border-emerald-100/60 scroll-animate">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Left Column: Ltd Logo -->
-        <div class="lg:col-span-4 flex justify-center">
-          <img src="Dramatherapy Bay Limited (4).png" alt="Dramatherapy Bay Limited Logo" class="max-h-64 w-auto object-contain">
-        </div>
 
-        <!-- Right Column: Story Text -->
-        <div class="lg:col-span-8 space-y-4">
-          <h2 class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 px-3 py-1 rounded-full inline-block">The Story Behind Dramatherapy Bay</h2>
-          <h3 class="text-base sm:text-xl md:text-2xl font-extrabold text-gray-900 whitespace-nowrap">A bay to pause. A space to explore. A way forward.</h3>
-          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
-            A bay is a sheltered place where boats can find a moment of calm, take refuge from the open water and prepare for their next journey.
-          </p>
-          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
-            This is the idea behind Dramatherapy Bay.
-          </p>
-          <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
-           Dramatherapy Bay takes inspiration from this idea: a welcoming space to step back, reflect, explore what matters and consider where you might wish to go next.
-          </p>
-          <p class="text-sm sm:text-base leading-relaxed pt-1">
-            <a href="about-dramatherapy.html" class="font-bold text-emerald-700 hover:text-emerald-800 hover:underline transition">
-              Curious about the thinking behind our name and approach? →
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Our Therapeutic Approach -->
+  <section class="py-16 sm:py-24 bg-emerald-50/50 border-y border-emerald-100/60 scroll-animate">
 
-  <!-- Our Services Quick Display Section -->
-  <section class="py-16 sm:py-24 bg-white relative scroll-animate">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">Our <span class="text-gradient">Services</span></h2>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Different ways to explore, express and grow.</h3>
-        <p class="text-gray-600 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-          We offer a range of therapeutic and creative services to support individuals, groups and organisations. Each approach is shaped around the needs, experiences and goals of those we work with.
+
+      <div class="text-center max-w-3xl mx-auto mb-14">
+
+        <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 px-3 py-1 rounded-full mb-4">
+          Our Approach
+        </span>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+          More Than <span class="text-gradient">Words</span>
+        </h2>
+
+        <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+          We recognise that people make sense of their experiences in different ways. Sometimes words are enough; at other times, creativity, imagination and embodied exploration can open up different possibilities for expression and understanding.
         </p>
-      </div>
-
-      <!-- Main Services Grid: Top 3 Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        
-        <!-- Card 1 -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-btn flex items-center justify-center text-white shadow-md mb-6">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Individual & Group Dramatherapy</h3>
-          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">A supportive space to explore emotions, relationships and life experiences through conversation, creativity and expression.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-600 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Creative Wellbeing Workshops & Training</h3>
-          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Tailored, experiential workshops for universities, schools and organisations, supporting emotional wellbeing, self-expression, connection and personal development.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Specialized Treatment</h3>
-          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Expert care for eating disorders, trauma, and complex mental health needs.</p>
-        </div>
 
       </div>
 
-      <!-- Main Services Grid: Bottom 2 Cards (Centered) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        
-        <!-- Card 4 -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Professional Development & Creative Coaching</h3>
-          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Reflective and creative approaches to personal and professional development, navigating transitions and exploring new possibilities.</p>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-100 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-center flex flex-col items-center">
-          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-          </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Bespoke Projects & Partnerships</h3>
-          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Collaborative creative wellbeing projects developed with educational institutions, charities and community organisations.</p>
-        </div>
-
-      </div>
-
-      <!-- View All Services Button -->
-      <div class="text-center mt-12">
-        <a href="services.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-50 border border-slate-200 text-emerald-700 text-xs sm:text-sm font-semibold hover:bg-emerald-50 hover:border-emerald-200 transition">
-          View All Services
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- What Our Clients Say Section -->
-  <section class="py-16 sm:py-24 bg-slate-50/60 border-t border-slate-100 scroll-animate">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">What Our <span class="text-gradient">Clients Say</span></h2>
-        <p class="text-gray-600 text-sm sm:text-base mt-3">
-          Real experiences from people who have found healing through dramatherapy.
-        </p>
-      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Testimonial 1 -->
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-amber-400 mb-4">★★★★★</div>
-            <p class="text-gray-600 text-sm italic leading-relaxed">
-              "Working with Lily has been a transformative experience. I feel more connected to myself and others, and have a better understanding of my emotions."
-            </p>
+
+        <!-- Card 1 -->
+        <div class="bg-white p-7 sm:p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 text-center">
+
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-5">
+
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v18m9-9H3m15.364-6.364l-12.728 12.728m0-12.728l12.728 12.728">
+              </path>
+            </svg>
+
           </div>
-          <p class="text-xs font-semibold text-gray-400 mt-6">— Anonymous Client</p>
+
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            Beyond Words
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-relaxed">
+            Stories, images, metaphor, role-play and creative expression can offer alternative ways to approach feelings and experiences that may be difficult to put into words.
+          </p>
+
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-amber-400 mb-4">★★★★★</div>
-            <p class="text-gray-600 text-sm italic leading-relaxed">
-              "Lily has helped me to see things from a different perspective and to challenge my negative thinking patterns. I feel more empowered and confident."
-            </p>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-7 sm:p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 text-center">
+
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-5">
+
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+              </path>
+            </svg>
+
           </div>
-          <p class="text-xs font-semibold text-gray-400 mt-6">— Anonymous Client</p>
+
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            At Your Own Pace
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-relaxed">
+            There is no expectation to perform, be artistic or have all the answers. We value each person's pace, preferences and readiness, creating space for exploration without pressure.
+          </p>
+
         </div>
 
-        <!-- Testimonial 3 -->
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-1 text-amber-400 mb-4">★★★★★</div>
-            <p class="text-gray-600 text-sm italic leading-relaxed">
-              "With the use of creative arts and stories in therapy, I finally feel safe exploring my body image and internal conflicts. I feel heard and accepted."
-            </p>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-7 sm:p-8 rounded-3xl border border-slate-100 shadow-lg shadow-slate-200/40 text-center">
+
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-teal-500/10 text-teal-600 flex items-center justify-center mb-5">
+
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.053-.382-3.016z">
+              </path>
+            </svg>
+
           </div>
-          <p class="text-xs font-semibold text-gray-400 mt-6">— Anonymous Client</p>
+
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            A Collaborative Space
+          </h3>
+
+          <p class="text-sm text-gray-500 leading-relaxed">
+            Therapy is a shared process. We work collaboratively, respecting each person's individuality and supporting them to explore experiences and possibilities in ways that feel meaningful.
+          </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
-  <!-- Bottom CTA Banner -->
-  <section class="py-16 bg-gradient-btn text-white text-center scroll-animate">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Ready to Begin Your Healing Journey?</h2>
-      <p class="text-white/90 text-sm sm:text-base max-w-xl mx-auto mb-8">
-        Take the first step toward self-discovery and emotional well-being today.
-      </p>
-      <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white text-emerald-700 text-sm font-bold shadow-lg hover:bg-slate-50 transition transform hover:scale-105">
-        Get in Touch
-      </a>
+
+  <!-- A Space for Different Journeys -->
+  <section class="py-16 sm:py-24 bg-white scroll-animate">
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 px-3 py-1 rounded-full mb-4">
+        Every Journey Is Different
+      </span>
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+        There Is No <span class="text-gradient">One Way Forward</span>
+      </h2>
+
+      <div class="max-w-3xl mx-auto space-y-5 text-gray-600 text-sm sm:text-base leading-relaxed">
+
+        <p>
+          Each person brings their own experiences, strengths, questions and hopes. What feels helpful for one person may be different for another.
+        </p>
+
+        <p>
+          We do not believe in a single route or a predetermined destination. Instead, we aim to offer a thoughtful and responsive space where different experiences can be explored, new perspectives can emerge and possibilities can gradually take shape.
+        </p>
+
+        <p>
+          Whether you are navigating a difficult period, making sense of change, exploring your identity or simply wanting to understand yourself differently, you do not need to know exactly where to begin.
+        </p>
+
+      </div>
+
     </div>
+
   </section>
 
+
+  <!-- Closing CTA -->
+  <section class="py-16 sm:py-20 bg-gradient-btn text-white text-center scroll-animate">
+
+    <div class="max-w-4xl mx-auto px-4">
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-5">
+        Every Journey Begins Somewhere.
+      </h2>
+
+      <p class="text-white/90 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+        If our approach resonates with you, or you would like to explore how dramatherapy might support you, we welcome you to get in touch.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+
+        <a
+          href="contact.html"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white text-emerald-700 text-sm font-bold shadow-lg hover:bg-slate-50 transition transform hover:-translate-y-0.5"
+        >
+          Arrange a Free 15-Minute Introduction
+
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3">
+            </path>
+          </svg>
+        </a>
+
+        <a
+          href="services.html"
+          class="inline-flex items-center px-8 py-3.5 rounded-full border border-white/70 text-white text-sm font-semibold hover:bg-white/10 transition"
+        >
+          Explore Our Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
   <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
-    <p>&copy; 2026 Dramatherapy Bay Limited | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
+
+    <p>
+      &copy; 2026 Dramatherapy Bay Limited |
+      Tel: 01223 912627 |
+      Email: dramatherapybay@gmail.com
+    </p>
+
   </footer>
 
-  <!-- Scroll Animation Script & Mobile Menu Toggle -->
+
+  <!-- Scroll Animation & Mobile Navigation -->
   <script>
+
     document.addEventListener("DOMContentLoaded", function () {
+
       const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -325,25 +511,37 @@
       };
 
       const observer = new IntersectionObserver((entries) => {
+
         entries.forEach(entry => {
+
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-          } else {
-            entry.target.classList.remove('is-visible');
           }
+
         });
+
       }, observerOptions);
 
       document.querySelectorAll('.scroll-animate').forEach(el => {
         observer.observe(el);
       });
+
+
+      // Mobile Navigation Toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton?.addEventListener('click', function () {
+
+        const isHidden = mobileMenu.classList.toggle('hidden');
+
+        mobileMenuButton.setAttribute('aria-expanded', String(!isHidden));
+
+      });
+
     });
 
-    // Mobile Navigation Toggle
-    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    });
   </script>
+
 </body>
 </html>
