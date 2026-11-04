@@ -25,7 +25,13 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-slate-50 to-white text-gray-800 font-sans antialiased">
+<body class="bg-gradient-to-b from-emerald-50/40 via-purple-50/20 to-slate-50 text-gray-800 font-sans antialiased relative overflow-x-hidden">
+
+  <!-- Background Decorative Glows -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="absolute top-1/3 right-10 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="absolute bottom-1/4 left-10 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2.5 shrink-0">
@@ -67,9 +73,9 @@
     </div>
   </header>
 
-  <main class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <main class="py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Main Header -->
-    <div class="text-center max-w-3xl mx-auto mb-12 scroll-animate">
+    <div class="text-center max-w-3xl mx-auto mb-10 scroll-animate">
       <h1 class="text-4xl font-extrabold text-gray-900 mb-3">Our <span class="text-gradient">Services</span></h1>
       <p class="text-gray-600 text-base leading-relaxed mb-6">
         Comprehensive dramatherapy services designed to support your journey toward healing, growth, and emotional well-being.
@@ -85,7 +91,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 scroll-animate">
       
       <!-- Category 1 -->
-      <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between">
+      <div class="bg-white/9aza backdrop-blur-sm rounded-3xl p-8 border border-emerald-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
         <div>
           <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-emerald-50">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Individual & Group Dramatherapy" class="w-full h-full object-cover">
@@ -94,7 +100,7 @@
           <p class="text-gray-600 text-sm leading-relaxed mb-4">
             Psychological therapy utilizing creative approaches to explore emotional challenges, process difficult experiences, and foster psychological growth.
           </p>
-          <ul class="text-xs text-emerald-800 space-y-1 mb-6 font-medium bg-gray-50 p-4 rounded-xl">
+          <ul class="text-xs text-emerald-800 space-y-1 mb-6 font-medium bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/40">
             <li>• <strong>Individual:</strong> 50 mins, one-to-one, in person/ online/ telephone</li>
             <li>• <strong>Group:</strong> 90 mins, maximum 6 participants</li>
           </ul>
@@ -103,7 +109,7 @@
       </div>
 
       <!-- Category 2 -->
-      <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-purple-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
         <div>
           <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-purple-50">
             <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Creative Wellbeing Workshops & Training" class="w-full h-full object-cover">
@@ -120,7 +126,7 @@
       </div>
 
       <!-- Category 3 -->
-      <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-blue-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
         <div>
           <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-blue-50">
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Professional Development & Creative Coaching" class="w-full h-full object-cover">
@@ -137,7 +143,7 @@
       </div>
 
       <!-- Category 4 -->
-      <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-amber-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
         <div>
           <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-amber-50">
             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Bespoke Projects & Partnerships" class="w-full h-full object-cover">
@@ -156,33 +162,34 @@
     </div>
 
     <!-- Centered Specialized Treatment Section -->
-    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm text-center scroll-animate">
+    <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-emerald-100/80 shadow-sm text-center scroll-animate">
       <div class="max-w-2xl mx-auto mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-2">Specialized Treatment for Eating Disorders</h2>
-        <p class="text-sm text-gray-600">A comprehensive, recovery-focused approach combining three complementary therapeutic approaches. Our approach is not centred on weight loss, but on supporting individuals to develop a healthier and more compassionate relationship with food, their bodies and themselves. Through structured support, therapeutic exploration and practical strategies, we aim to address the emotional, psychological and behavioural difficulties associated with eating disorders.</p>
+        <p class="text-sm text-gray-600 leading-relaxed">A comprehensive, recovery-focused approach combining three complementary therapeutic approaches. Our approach is not centred on weight loss, but on supporting individuals to develop a healthier and more compassionate relationship with food, their bodies and themselves. Through structured support, therapeutic exploration and practical strategies, we aim to address the emotional, psychological and behavioural difficulties associated with eating disorders.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
-        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <div class="bg-slate-50/80 p-6 rounded-2xl border border-gray-100 shadow-sm">
           <h3 class="font-bold text-gray-900 mb-2">Dramatherapy for Eating Disorders</h3>
-          <p class="text-xs font-semibold text-gray-500 mb-2">Flexible, Individualised Duration</p>
-          <p class="text-sm text-gray-600">Uses creativity, imagination, movement, storytelling, role-play and symbolic expression to explore emotions and experiences that may be difficult to put into words. It can help individuals develop emotional awareness, strengthen self-understanding, explore body image and identity, and discover alternative ways of relating to themselves and others.</p>
+          <p class="text-xs font-semibold text-emerald-700 mb-2">Flexible, Individualised Duration</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Uses creativity, imagination, movement, storytelling, role-play and symbolic expression to explore emotions and experiences that may be difficult to put into words. It can help individuals develop emotional awareness, strengthen self-understanding, explore body image and identity, and discover alternative ways of relating to themselves and others.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <div class="bg-slate-50/80 p-6 rounded-2xl border border-gray-100 shadow-sm">
           <h3 class="font-bold text-gray-900 mb-2">CBT-T (Cognitive Behavioral Therapy- Ten)</h3>
-          <p class="text-sm text-gray-600">A structured, evidence-informed approach that helps individuals understand and address the thoughts, beliefs, feelings and behaviours that contribute to and maintain eating difficulties. Sessions explore and gently challenge unhelpful beliefs and thinking patterns around food, weight, body image and self-worth. The approach focuses on establishing regular eating patterns and developing healthier coping strategies. Between-session activities or home tasks are usually encouraged to help individuals practise new skills and apply what they have learned in everyday life.</p>
+          <p class="text-xs font-semibold text-emerald-700 mb-2">Structured Evidence-Informed</p>
+          <p class="text-sm text-gray-600 leading-relaxed">A structured, evidence-informed approach that helps individuals understand and address the thoughts, beliefs, feelings and behaviours that contribute to and maintain eating difficulties. Sessions explore and gently challenge unhelpful beliefs and thinking patterns around food, weight, body image and self-worth. The approach focuses on establishing regular eating patterns and developing healthier coping strategies. Between-session activities or home tasks are usually encouraged to help individuals practise new skills and apply what they have learned in everyday life.</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <div class="bg-slate-50/80 p-6 rounded-2xl border border-gray-100 shadow-sm">
           <h3 class="font-bold text-gray-900 mb-2">GSH (Guided Self-Help)</h3>
-          <p class="text-xs font-semibold text-gray-500 mb-2">Usually 10–12 Sessions</p>
-          <p class="text-sm text-gray-600">A structured, supported approach using evidence-based self-help materials alongside regular therapeutic guidance and encouragement. It helps individuals understand their eating difficulties, work towards consistent eating patterns, monitor their progress and make manageable changes at their own pace.</p>
+          <p class="text-xs font-semibold text-emerald-700 mb-2">Usually 10–12 Sessions</p>
+          <p class="text-sm text-gray-600 leading-relaxed">A structured, supported approach using evidence-based self-help materials alongside regular therapeutic guidance and encouragement. It helps individuals understand their eating difficulties, work towards consistent eating patterns, monitor their progress and make manageable changes at their own pace.</p>
         </div>
       </div>
 
-      <!-- Virtual Reality (VR) in Therapeutic Practice Section -->
-      <div class="bg-emerald-50/40 p-6 sm:p-8 rounded-2xl border border-emerald-100 text-left mb-8">
+      <!-- Virtual Reality (VR) in Therapeutic Practice Section (Centered) -->
+      <div class="bg-emerald-50/50 p-6 sm:p-8 rounded-2xl border border-emerald-100 text-center mb-8 shadow-sm">
         <h3 class="font-bold text-gray-900 text-lg mb-3">Virtual Reality (VR) in Therapeutic Practice</h3>
-        <div class="space-y-3 text-sm text-gray-600 leading-relaxed">
+        <div class="space-y-3 text-sm text-gray-600 leading-relaxed max-w-3xl mx-auto">
           <p>We are interested in exploring how immersive technology can complement psychological and creative therapeutic approaches.</p>
           <p>Where appropriate, guided virtual reality (VR) experiences may be incorporated into sessions as an optional, therapist-facilitated resource. This may be considered alongside different approaches, including dramatherapy, Cognitive Behavioural Therapy for Eating Disorders (CBT-T) and Guided Self-Help (GSH).</p>
           <p>Depending on individual needs and therapeutic goals, VR may offer additional opportunities to explore sensory awareness, grounding, relaxation and emotional regulation.</p>
@@ -190,9 +197,9 @@
         </div>
       </div>
 
-      <div class="bg-emerald-50/60 p-6 rounded-2xl border border-emerald-100 text-center">
+      <div class="bg-gradient-to-r from-emerald-50 via-purple-50/40 to-emerald-50 p-6 rounded-2xl border border-emerald-100 text-center shadow-sm">
         <h4 class="font-bold text-gray-900 mb-1">Integrated Treatment Approach</h4>
-        <p class="text-sm text-gray-600">Our specialized eating disorder treatment combines the creative power of dramatherapy with evidence-based cognitive behavioral techniques and structured self-help support for comprehensive recovery.</p>
+        <p class="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">Our specialized eating disorder treatment combines the creative power of dramatherapy with evidence-based cognitive behavioral techniques and structured self-help support for comprehensive recovery.</p>
       </div>
     </div>
   </main>
