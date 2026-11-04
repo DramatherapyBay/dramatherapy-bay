@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>戲劇治療灣的理念 - 戲劇治療灣有限公司</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .scroll-animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
+    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="zh-index.html" class="flex items-center gap-3">
+        <img src="Untitled design (2).png" alt="戲劇治療灣標誌" class="h-16 sm:h-20 w-auto object-contain py-1">
+        <div>
+          <span class="text-xl font-bold text-gray-900 tracking-tight block leading-none">戲劇治療灣</span>
+          <span class="text-xs text-gray-500 font-medium">有限公司</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
+        <a href="zh-index.html" class="hover:text-emerald-600 transition">主頁</a>
+        <a href="zh-about-dramatherapy.html" class="hover:text-emerald-600 transition">關於戲劇治療</a>
+        <a href="zh-about-lily.html" class="hover:text-emerald-600 transition">關於 Lily</a>
+        <a href="zh-services.html" class="hover:text-emerald-600 transition">服務</a>
+        <a href="zh-resources.html" class="hover:text-emerald-600 transition">資源</a>
+        <a href="zh-contact.html" class="hover:text-emerald-600 transition">聯絡我們</a>
+        <span class="text-gray-300">|</span>
+        <a href="philosophy.html" class="text-gray-500 hover:text-emerald-600 transition font-bold">EN</a>
+      </nav>
+
+      <a href="zh-contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md hover:opacity-95 transition">預約諮詢</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="切換導航選單" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="zh-index.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">主頁</a>
+      <a href="zh-about-dramatherapy.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於戲劇治療</a>
+      <a href="zh-about-lily.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於 Lily</a>
+      <a href="zh-services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">服務</a>
+      <a href="zh-resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">資源</a>
+      <a href="zh-contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">聯絡我們</a>
+      <div class="pt-2 border-t border-gray-100 flex items-center gap-3">
+        <span class="text-xs text-gray-500 font-medium">切換語言：</span>
+        <a href="philosophy.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">English</a>
+      </div>
+      <a href="zh-contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">預約諮詢</a>
+    </div>
+  </header>
+
+  <!-- Page Header Hero -->
+  <section class="py-16 lg:py-20 bg-gradient-to-b from-slate-50 to-white text-center scroll-animate">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+        戲劇治療灣的 <span class="text-gradient">理念</span>
+      </h1>
+      <p class="text-emerald-700 font-bold text-lg sm:text-xl">
+        一處讓人停歇的海灣，一個探索自我的空間，一條通往前方的路。
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content Cards -->
+  <main class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <!-- Card 1: The Sanctuary Metaphor -->
+      <div class="bg-slate-50/80 p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-lg shadow-slate-100 scroll-animate">
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            戲劇治療灣的理念，源自海岸邊一處寧靜而隱蔽的海灣——讓船隻得以暫時停泊、尋求庇護，並重新辨認方向，再繼續航程。
+          </p>
+          <p>
+            這個意象也延伸出我們對人生的理解：在人生不同的處境中，學習何時調整步伐、何時放下、何時堅守，以及如何尋找屬於自己的前行方向。
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Life Like Water / Be Water -->
+      <div class="bg-emerald-50/40 p-8 sm:p-10 rounded-3xl border border-emerald-100/60 shadow-lg shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">人生如水，時刻流動變化。</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            有時風平浪靜，有時潮起潮落，也難免遇上意料之外的風浪。人生並不總是如我們所期望般發展，而有些事情，亦非我們所能掌控。
+          </p>
+          <p>
+            戲劇治療灣的理念受到李小龍「<span class="font-semibold text-emerald-800">Be Water</span>」（如水）的哲學啟發，重視靈活與適應的力量。水不會一味抗拒眼前的阻礙，而是能夠順勢流動、轉換方向，並尋找另一條出路。
+          </p>
+          <p>
+            在人生之中，這並不代表放棄自己的立場、失去界線，或對所有遭遇一概接受。相反，是學習辨別何時需要調整、何時應該停下來、何時可以放下，以及何時需要堅守自己的信念。
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Stoic Philosophy & Balance -->
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">在接納與選擇之間尋找平衡</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            這份對人生的理解，亦與斯多葛哲學（Stoicism）的思想相呼應，尤其是當中對於「能夠掌控」與「無法掌控」之事的區分。
+          </p>
+          <p>
+            我們未必能夠改變身處的環境、他人的行為，或已經發生的事情。然而，我們仍可以探索自己的價值觀、看待事情的角度，以及面對不同處境時的回應，並重新思考應該將心力放在哪些事情上。
+          </p>
+          <p>
+            這並不是要壓抑困難的情緒，亦不是假裝一切安好，而是讓自己的經歷與感受有被理解和接納的空間，同時逐步釐清自己希望如何面對和回應眼前的處境。
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4: Conclusion Box -->
+      <div class="bg-gradient-to-br from-emerald-50 via-purple-50/30 to-slate-50 p-8 sm:p-10 rounded-3xl border border-emerald-100 shadow-xl shadow-slate-100 text-center scroll-animate">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">在探索中尋找屬於自己的方向</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mb-8">
+          <p>
+            在戲劇治療灣，我們相信，向前走並不一定代表要不斷逼迫自己，也不需要事事都有答案。有時，真正的開始，是容許自己暫時停下來，聆聽內心的聲音，了解當下的需要。
+          </p>
+          <p>
+            透過治療性的對話、創意表達與探索，我們希望提供一個讓你重新連結自我、發掘不同角度，並探索更多可能性的空間。
+          </p>
+          <p class="font-medium text-emerald-900">
+            面對人生的種種挑戰，從來沒有唯一正確的走法，也不必循著別人的航線前行。你的人生旅程，始終由你自己走出。
+          </p>
+          <p class="text-base sm:text-lg font-bold text-gradient italic pt-2">
+            「我們未必能掌控每一道浪潮，但可以在探索中，尋找屬於自己的航行方式。」
+          </p>
+        </div>
+
+        <div class="pt-4 border-t border-emerald-200/60">
+          <p class="text-sm font-bold text-gray-800 tracking-wide uppercase mb-6">
+            一處讓人停歇的空間，一段探索自我的旅程，一條通往前方的路。
+          </p>
+          <a href="zh-contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white bg-gradient-btn shadow-lg hover:opacity-95 transition font-semibold text-sm">
+            聯絡我們
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
+    <p>&copy; 2026 戲劇治療灣有限公司 | 電話：01223 912627 | 電郵：dramatherapybay@gmail.com</p>
+  </footer>
+
+  <!-- Scroll Animation Script & Mobile Menu Toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Mobile Navigation Toggle
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
