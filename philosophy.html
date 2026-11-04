@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Philosophy Behind Dramatherapy Bay - Dramatherapy Bay Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .scroll-animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
+    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="Untitled design (2).png" alt="Dramatherapy Bay Logo" class="h-16 sm:h-20 w-auto object-contain py-1">
+        <div>
+          <span class="text-xl font-bold text-gray-900 tracking-tight block leading-none">Dramatherapy Bay</span>
+          <span class="text-xs text-gray-500 font-medium">Limited</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
+        <a href="index.html" class="hover:text-emerald-600 transition">Home</a>
+        <a href="about-dramatherapy.html" class="hover:text-emerald-600 transition">About Dramatherapy</a>
+        <a href="about-lily.html" class="hover:text-emerald-600 transition">About Lily</a>
+        <a href="services.html" class="hover:text-emerald-600 transition">Services</a>
+        <a href="resources.html" class="hover:text-emerald-600 transition">Resources</a>
+        <a href="contact.html" class="hover:text-emerald-600 transition">Contact</a>
+      </nav>
+
+      <a href="contact.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md hover:opacity-95 transition">Book Consultation</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="index.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Home</a>
+      <a href="about-dramatherapy.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">About Dramatherapy</a>
+      <a href="about-lily.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">About Lily</a>
+      <a href="services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Services</a>
+      <a href="resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Resources</a>
+      <a href="contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">Contact</a>
+      <a href="contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">Book Consultation</a>
+    </div>
+  </header>
+
+  <!-- Page Header Hero -->
+  <section class="py-16 lg:py-20 bg-gradient-to-b from-slate-50 to-white text-center scroll-animate">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+        The Philosophy Behind <span class="text-gradient">Dramatherapy Bay</span>
+      </h1>
+      <p class="text-emerald-700 font-bold text-lg sm:text-xl">
+        A bay to pause. A space to explore. A way forward.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content Cards -->
+  <main class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <!-- Card 1: The Sanctuary Metaphor -->
+      <div class="bg-slate-50/80 p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-lg shadow-slate-100 scroll-animate">
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            The idea of Dramatherapy Bay is rooted in the image of a sheltered place along the coastline — somewhere to pause, find refuge and regain our bearings.
+          </p>
+          <p>
+            Beyond this image lies a wider philosophy about how we navigate life: learning when to adapt, when to let go, when to stand firm and how to find our own way forward.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Life Like Water / Be Water -->
+      <div class="bg-emerald-50/40 p-8 sm:p-10 rounded-3xl border border-emerald-100/60 shadow-lg shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">Life, like water, is always changing.</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            There are calm waters, changing tides and unexpected waves. Life rarely unfolds exactly as we imagine, and not everything is within our control.
+          </p>
+          <p>
+            Inspired by Bruce Lee's philosophy of <span class="font-semibold text-emerald-800">Be Water</span>, we recognise the value of flexibility and adaptability. Water does not always resist what stands in its way; it can flow, change direction and find another path.
+          </p>
+          <p>
+            In life, this does not mean giving up, losing our boundaries or simply accepting everything that happens. Rather, it is about recognising when to adapt, when to pause, when to let go and when to stand firm.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Stoic Philosophy & Balance -->
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">Finding balance between acceptance and choice</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            This way of thinking also resonates with Stoic philosophy, particularly the distinction between what we can and cannot control.
+          </p>
+          <p>
+            We cannot always change our circumstances, other people's actions or what has happened in the past. However, we can explore our own values, perspectives and responses, and consider where we wish to direct our energy.
+          </p>
+          <p>
+            This is not about suppressing difficult emotions or pretending that everything is okay. It is about making room for our experiences while gradually finding greater clarity in how we respond to them.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4: Conclusion Box -->
+      <div class="bg-gradient-to-br from-emerald-50 via-purple-50/30 to-slate-50 p-8 sm:p-10 rounded-3xl border border-emerald-100 shadow-xl shadow-slate-100 text-center scroll-animate">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">A space to find your own way</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mb-8">
+          <p>
+            At Dramatherapy Bay, we believe that moving forward does not always mean pushing harder or having all the answers. Sometimes, it begins with giving ourselves permission to pause, listen and understand what we need.
+          </p>
+          <p>
+            Through therapeutic conversation, creativity and exploration, we offer a space to reconnect with yourself, discover different perspectives and explore new possibilities.
+          </p>
+          <p class="font-medium text-emerald-900">
+            There is no single way to navigate life's challenges, and no need to follow someone else's course. Your journey is your own.
+          </p>
+          <p class="text-base sm:text-lg font-bold text-gradient italic pt-2">
+            "We may not control every wave, but we can explore how we navigate the water."
+          </p>
+        </div>
+
+        <div class="pt-4 border-t border-emerald-200/60">
+          <p class="text-sm font-bold text-gray-800 tracking-wide uppercase mb-6">
+            A space to pause. A space to explore. A way forward.
+          </p>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white bg-gradient-btn shadow-lg hover:opacity-95 transition font-semibold text-sm">
+            Get in Touch
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
+    <p>&copy; 2026 Dramatherapy Bay Limited | Tel: 01223 912627 | Email: dramatherapybay@gmail.com</p>
+  </footer>
+
+  <!-- Scroll Animation Script & Mobile Menu Toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Mobile Navigation Toggle
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
