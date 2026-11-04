@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於 Lily - 戲劇治療灣有限公司</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .bg-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #F0FDF4 50%, #FAF5FF 100%); }
+    .card-gradient-banner { background: linear-gradient(135deg, #34D399 0%, #818CF8 50%, #C084FC 100%); }
+    .special-card-bg { background: linear-gradient(135deg, rgba(240,253,244,0.6) 0%, rgba(245,243,255,0.6) 100%); }
 
+    /* Scroll Animation Transition States */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .scroll-animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="zh-index.html" class="flex items-center gap-2.5 shrink-0">
+        <img src="Untitled design (2).png" alt="戲劇治療灣標誌" class="h-14 sm:h-16 w-auto object-contain py-1">
+        <div>
+          <span class="text-base sm:text-lg font-bold text-gray-900 tracking-tight block leading-none">戲劇治療灣</span>
+          <span class="text-[10px] text-gray-500 font-medium">有限公司</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-2.5 lg:gap-4 text-xs lg:text-sm font-semibold text-gray-600">
+        <a href="zh-index.html" class="hover:text-emerald-600 transition whitespace-nowrap">主頁</a>
+        <a href="zh-about-dramatherapy.html" class="hover:text-emerald-600 transition whitespace-nowrap">關於戲劇治療</a>
+        <a href="zh-about-lily.html" class="text-emerald-600 font-bold whitespace-nowrap">關於 Lily</a>
+        <a href="zh-services.html" class="hover:text-emerald-600 transition">服務</a>
+        <a href="zh-innovation.html" class="hover:text-emerald-600 transition">創新發展</a>
+        <a href="zh-resources.html" class="hover:text-emerald-600 transition">資源</a>
+        <a href="zh-contact.html" class="hover:text-emerald-600 transition whitespace-nowrap">聯絡我們</a>
+        <span class="text-gray-300">|</span>
+        <a href="about-lily.html" class="text-gray-500 hover:text-emerald-600 transition font-bold">EN</a>
+      </nav>
+      
+      <a href="zh-contact.html" class="hidden sm:inline-flex shrink-0 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-gradient-btn shadow-md hover:opacity-95 transition whitespace-nowrap">預約諮詢</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="切換導航選單" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="zh-index.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">主頁</a>
+      <a href="zh-about-dramatherapy.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於戲劇治療</a>
+      <a href="zh-about-lily.html" class="block py-2 text-base font-bold text-emerald-600">關於 Lily</a>
+      <a href="zh-services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">服務</a>
+      <a href="zh-innovation.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">創新發展</a>
+      <a href="zh-resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">資源</a>
+      <a href="zh-contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">聯絡我們</a>
+      <div class="pt-2 border-t border-gray-100 flex items-center gap-3">
+        <span class="text-xs text-gray-500 font-medium">切換語言：</span>
+        <a href="about-lily.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">English</a>
+      </div>
+      <a href="zh-contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">預約諮詢</a>
+    </div>
+  </header>
+
+  <main class="bg-calm-gradient py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Top Centered Name & Title with Gradient Effect -->
+      <div class="text-center space-y-2 scroll-animate">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
+          關於 <span class="text-gradient">Lily Lau</span>
+        </h1>
+        <p class="text-emerald-700 font-semibold text-base sm:text-lg">以細膩、創意及文化敏感度為本的治療方式。</p>
+      </div>
+
+      <!-- Side-by-Side Layout: Photo Card on Left, Professional Background on Right -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-animate">
+        
+        <!-- Left: Photo Card with 3D shadow & 5 Stars -->
+        <div class="lg:col-span-4 bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-lg border border-emerald-100/50 text-center space-y-4">
+          <div class="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full overflow-hidden shadow-xl border-4 border-emerald-50 bg-emerald-100 flex items-center justify-center">
+            <img src="DSC01224-Enhanced-NR-min.jpg" alt="Lily Lau - 戲劇治療師" class="w-full h-full object-cover">
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-bold text-gray-900 text-lg">Lily Lau</h3>
+            <!-- 5 Star Google Reviews style rating -->
+            <div class="flex justify-center text-amber-400 text-sm space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-xs font-semibold text-emerald-700 pt-1">HCPC 註冊藝術治療師（戲劇治療）</p>
+          </div>
+        </div>
+
+        <!-- Right: Professional Background Text -->
+        <div class="lg:col-span-8 bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-lg border border-emerald-100/50 space-y-5">
+          <h2 class="text-2xl font-extrabold text-gray-900 border-b border-gray-100 pb-3">專業背景</h2>
+          
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Lily Lau 是 Dramatherapy Bay Ltd 的創辦人，亦是一位於英國註冊的戲劇治療師，在劍橋及網上提供專業、具心理學基礎且富同理心的戲劇治療服務。
+          </p>
+
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            除了私人執業外，Lily 亦於英國國民保健署（NHS）成人心理健康服務工作，累積了豐富的臨床經驗，支援面對複雜心理健康需要、情緒困擾及重大人生轉變的人士。她的工作涵蓋不同心理及情緒困難，以及各種個人處境，讓她能夠以細心、靈活及因應個別需要的方式開展治療工作。
+          </p>
+
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+            Lily 原籍香港，擁有多元文化背景，深明文化、身份認同、個人經歷及生活處境，如何影響我們理解自己、表達感受及與他人建立關係的方式。她尤其關注不同文化及背景人士的需要，致力營造包容、尊重及接納的治療空間，讓每個人都能感受到被理解、被聆聽及獲得支持。
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Multicultural Expertise -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 shadow-sm border border-gray-100 text-center space-y-8 scroll-animate">
+        <div>
+          <h2 class="text-2xl font-extrabold text-gray-900 mb-2">多語言及跨文化經驗</h2>
+          <p class="text-sm text-gray-600">能夠以三種語言提供服務，並重視文化敏感度，讓來自不同背景的人士能以較自在及熟悉的語言表達自己。</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <!-- English Card -->
+          <div class="bg-gradient-to-b from-emerald-50/80 to-white p-6 rounded-2xl border border-emerald-100 shadow-sm flex flex-col items-center space-y-3">
+            <div class="w-14 h-14 rounded-full bg-gradient-btn flex items-center justify-center text-white shadow-md text-xl">🌐</div>
+            <h3 class="font-bold text-gray-900">英語</h3>
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-100/60 px-3 py-1 rounded-full">流利</span>
+          </div>
+          <!-- Cantonese Card -->
+          <div class="bg-gradient-to-b from-emerald-50/80 to-white p-6 rounded-2xl border border-emerald-100 shadow-sm flex flex-col items-center space-y-3">
+            <div class="w-14 h-14 rounded-full bg-gradient-btn flex items-center justify-center text-white shadow-md text-xl">🌐</div>
+            <h3 class="font-bold text-gray-900">廣東話</h3>
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-100/60 px-3 py-1 rounded-full">流利</span>
+          </div>
+          <!-- Mandarin Card -->
+          <div class="bg-gradient-to-b from-emerald-50/80 to-white p-6 rounded-2xl border border-emerald-100 shadow-sm flex flex-col items-center space-y-3">
+            <div class="w-14 h-14 rounded-full bg-gradient-btn flex items-center justify-center text-white shadow-md text-xl">🌐</div>
+            <h3 class="font-bold text-gray-900">普通話</h3>
+            <span class="text-xs font-semibold text-emerald-700 bg-emerald-100/60 px-3 py-1 rounded-full">流利</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Therapeutic Philosophy -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 text-center space-y-4 scroll-animate">
+        <h2 class="text-xl font-bold text-gray-900">治療理念</h2>
+        <blockquote class="text-base sm:text-lg text-gray-700 italic font-medium max-w-2xl mx-auto leading-relaxed">
+          「我相信，每個人內在都蘊藏著自我探索、成長及轉變的潛能。透過創意表達及協作的治療過程，我們可以逐步發掘這些可能，並以自己的步伐走向改變。」
+        </blockquote>
+      </div>
+
+      <!-- Areas of Specialization -->
+      <div class="special-card-bg rounded-3xl p-8 sm:p-12 shadow-sm border border-emerald-100/60 scroll-animate">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-2xl font-extrabold text-gray-900 mb-2">主要服務及臨床經驗範疇</h2>
+          <p class="text-sm text-gray-600">Lily 擁有支援不同背景人士及處理複雜心理健康需要的臨床經驗，主要涵蓋以下範疇：</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-100 text-sm text-gray-700 shadow-sm">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> 有特殊教育需要的兒童及青少年（SEN）</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> 自閉症譜系（ASD）</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> 飲食困難及飲食失調</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> 複雜性創傷後壓力症（C-PTSD）</div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> 專注力不足／過度活躍症（ADHD）</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> 情緒不穩定型人格障礙（EUPD）</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> 長者及失智症支援</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beyond the Practice & Fun Fact -->
+      <div class="card-gradient-banner rounded-3xl p-8 sm:p-12 text-white shadow-xl space-y-8 scroll-animate">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl font-extrabold mb-3 text-white">治療以外的生活</h2>
+          <p class="text-emerald-50 text-sm leading-relaxed">
+            Lily 相信，維持個人生活與專業工作的平衡，有助豐富個人的生命體驗，亦能為專業實踐帶來不同的視野。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+          <div class="bg-white/15 backdrop-blur-md p-4 rounded-xl border border-white/25 text-xs sm:text-sm font-semibold shadow-sm">跆拳道（註冊教練及裁判）</div>
+          <div class="bg-white/15 backdrop-blur-md p-4 rounded-xl border border-white/25 text-xs sm:text-sm font-semibold shadow-sm">游泳及單車</div>
+          <div class="bg-white/15 backdrop-blur-md p-4 rounded-xl border border-white/25 text-xs sm:text-sm font-semibold shadow-sm">羽毛球</div>
+          <div class="bg-white/15 backdrop-blur-md p-4 rounded-xl border border-white/25 text-xs sm:text-sm font-semibold shadow-sm">園藝</div>
+          <div class="bg-white/15 backdrop-blur-md p-4 rounded-xl border border-white/25 text-xs sm:text-sm font-semibold shadow-sm">學習英國手語（BSL）</div>
+          <div class="bg-white/15 backdrop-blur-md p-4 rounded-xl border border-white/25 text-xs sm:text-sm font-semibold shadow-sm">社區義務工作</div>
+        </div>
+
+        <div class="bg-white/20 backdrop-blur-md p-6 rounded-2xl border border-white/30 text-center space-y-2 shadow-sm">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-100">一點關於 Lily 的小趣事</h3>
+          <p class="text-xs sm:text-sm text-white">
+            除了戲劇治療師的身份，Lily 亦是一位註冊跆拳道教練及裁判。跆拳道所講求的紀律、專注及身心協調，亦讓她對覺察、專注及自我調節有更多體會，並豐富了她對治療工作的理解。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
+    <p>&copy; 2026 戲劇治療灣有限公司。版權所有。| 電話：01223 912627 | 電郵：dramatherapybay@gmail.com</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Scroll animation observer
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Mobile Navigation Toggle
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
