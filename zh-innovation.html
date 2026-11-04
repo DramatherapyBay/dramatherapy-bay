@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>創新、研究與合作 - 戲劇治療灣有限公司</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] } } } }
+  </script>
+  <style>
+    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .bg-blue-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 50%, #EEF2FF 100%); }
+    .scroll-animate { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .scroll-animate.is-visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="zh-index.html" class="flex items-center gap-2.5 shrink-0">
+        <img src="Untitled design (2).png" alt="戲劇治療灣標誌" class="h-14 sm:h-16 w-auto object-contain py-1">
+        <div>
+          <span class="text-base sm:text-lg font-bold text-gray-900 tracking-tight block leading-none">戲劇治療灣</span>
+          <span class="text-[10px] text-gray-500 font-medium">有限公司</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-2.5 lg:gap-4 text-xs lg:text-sm font-semibold text-gray-600">
+        <a href="zh-index.html" class="hover:text-emerald-600 transition whitespace-nowrap">主頁</a>
+        <a href="zh-about-dramatherapy.html" class="hover:text-emerald-600 transition whitespace-nowrap">關於戲劇治療</a>
+        <a href="zh-about-lily.html" class="hover:text-emerald-600 transition whitespace-nowrap">關於 Lily</a>
+        <a href="zh-services.html" class="hover:text-emerald-600 transition">服務</a>
+        <a href="zh-innovation.html" class="text-emerald-600 font-bold whitespace-nowrap">創新發展</a>
+        <a href="zh-resources.html" class="hover:text-emerald-600 transition">資源</a>
+        <a href="zh-contact.html" class="hover:text-emerald-600 transition whitespace-nowrap">聯絡我們</a>
+        <span class="text-gray-300">|</span>
+        <a href="innovation.html" class="text-gray-500 hover:text-emerald-600 transition font-bold">EN</a>
+      </nav>
+      <a href="zh-contact.html" class="hidden sm:inline-flex shrink-0 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-gradient-btn shadow-md">預約諮詢</a>
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-600"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="zh-index.html" class="block py-2 text-base font-semibold text-gray-600">主頁</a>
+      <a href="zh-innovation.html" class="block py-2 text-base font-bold text-emerald-600">創新發展</a>
+      <a href="innovation.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">English</a>
+    </div>
+  </header>
 
+  <main class="py-12 bg-blue-calm-gradient min-h-screen">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="bg-slate-50/80 p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-lg scroll-animate">
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-4">創新、研究與 <span class="text-gradient">合作</span></h1>
+        <p class="text-gray-700 leading-relaxed">在戲劇治療灣，我們相信心理支援不應局限於既有的方法，而應持續保持開放，接納新的理念、觀點及可能性。</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-sky-50/80 text-gray-600 py-12 border-t text-center text-xs">
+    <p>&copy; 2026 戲劇治療灣有限公司 | 電話：01223 912627 | 電郵：dramatherapybay@gmail.com</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.scroll-animate').forEach(el => el.classList.add('is-visible'));
+    });
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+  </script>
+</body>
+</html>
