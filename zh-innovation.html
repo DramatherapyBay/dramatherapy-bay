@@ -4,19 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>創新、研究與合作 - 戲劇治療灣有限公司</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] } } } }
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+        }
+      }
+    }
   </script>
   <style>
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .scroll-animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
     .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .bg-blue-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 50%, #EEF2FF 100%); }
-    .scroll-animate { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-    .scroll-animate.is-visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="zh-index.html" class="flex items-center gap-2.5 shrink-0">
@@ -26,6 +46,8 @@
           <span class="text-[10px] text-gray-500 font-medium">有限公司</span>
         </div>
       </a>
+
+      <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-2.5 lg:gap-4 text-xs lg:text-sm font-semibold text-gray-600">
         <a href="zh-index.html" class="hover:text-emerald-600 transition whitespace-nowrap">主頁</a>
         <a href="zh-about-dramatherapy.html" class="hover:text-emerald-600 transition whitespace-nowrap">關於戲劇治療</a>
@@ -37,33 +59,187 @@
         <span class="text-gray-300">|</span>
         <a href="innovation.html" class="text-gray-500 hover:text-emerald-600 transition font-bold">EN</a>
       </nav>
-      <a href="zh-contact.html" class="hidden sm:inline-flex shrink-0 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-gradient-btn shadow-md">預約諮詢</a>
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-600"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+
+      <a href="zh-contact.html" class="hidden sm:inline-flex shrink-0 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-gradient-btn shadow-md hover:opacity-95 transition whitespace-nowrap">預約諮詢</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="切換導航選單" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
+
+    <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
-      <a href="zh-index.html" class="block py-2 text-base font-semibold text-gray-600">主頁</a>
+      <a href="zh-index.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">主頁</a>
+      <a href="zh-about-dramatherapy.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於戲劇治療</a>
+      <a href="zh-about-lily.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於 Lily</a>
+      <a href="zh-services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">服務</a>
       <a href="zh-innovation.html" class="block py-2 text-base font-bold text-emerald-600">創新發展</a>
-      <a href="innovation.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full">English</a>
+      <a href="zh-resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">資源</a>
+      <a href="zh-contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">聯絡我們</a>
+      <div class="pt-2 border-t border-gray-100 flex items-center gap-3">
+        <span class="text-xs text-gray-500 font-medium">切換語言：</span>
+        <a href="innovation.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">English</a>
+      </div>
+      <a href="zh-contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">預約諮詢</a>
     </div>
   </header>
 
+  <!-- Page Hero Header -->
+  <section class="py-16 lg:py-20 bg-gradient-to-b from-slate-50 to-white text-center scroll-animate">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        創新、研究與 <span class="text-gradient">合作</span>
+      </h1>
+      <p class="text-emerald-700 font-bold text-base sm:text-xl max-w-3xl mx-auto">
+        探索治療、創意與科技交匯之處的嶄新可能
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content Cards -->
   <main class="py-12 bg-blue-calm-gradient min-h-screen">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-      <div class="bg-slate-50/80 p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-lg scroll-animate">
-        <h1 class="text-3xl font-extrabold text-gray-900 mb-4">創新、研究與 <span class="text-gradient">合作</span></h1>
-        <p class="text-gray-700 leading-relaxed">在戲劇治療灣，我們相信心理支援不應局限於既有的方法，而應持續保持開放，接納新的理念、觀點及可能性。</p>
+
+      <!-- Box 1: Core Vision -->
+      <div class="bg-slate-50/80 p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-lg shadow-slate-100 scroll-animate">
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            在戲劇治療灣，我們相信，心理支援不應局限於既有的方法，而應持續保持開放，接納新的理念、觀點及可能性。
+          </p>
+          <p>
+            除了日常的治療工作外，我們亦積極探索創意取向、沉浸式科技及新興數碼工具，如何為情緒健康及心理支援帶來更多可能。
+          </p>
+          <p>
+            我們關注的並非以科技取代人與人之間的連結，而是探索科技如何成為額外的輔助途徑，讓人們有更多機會接觸及理解自身經歷、提升情緒覺察，並探索與自己及周遭世界相處的不同方式。
+          </p>
+        </div>
       </div>
+
+      <!-- Box 2: Virtual Reality -->
+      <div class="bg-emerald-50/40 p-8 sm:p-10 rounded-3xl border border-emerald-100/60 shadow-lg shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">探索虛擬實境於治療中的應用</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            我們正探索如何將虛擬實境（Virtual Reality，VR）作為輔助資源，應用於不同的治療情境之中。
+          </p>
+          <p>
+            在合適的情況下，治療師可於治療過程中引入引導式 VR 體驗，作為一項自願參與的輔助工具。無論是戲劇治療、飲食失調認知行為治療（CBT-T），還是引導式自助治療（GSH），我們均關注沉浸式體驗如何創造更多探索機會，例如提升感官覺察、練習身心安定、促進放鬆，以及探索情緒調節的方式。
+          </p>
+          <p>
+            我們明白，科技輔助並非適合所有人。因此，是否採用 VR，必須考慮個人的需要、意願、使用便利性及臨床適用性，並以治療關係作為整個治療過程的核心。
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 3: Academic Collaboration & Research Areas -->
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">學術協作與項目發展</h2>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
+          我們正透過與學術合作夥伴的交流及協作，逐步拓展這方面的探索，尋求結合心理治療實踐、學術研究與科技創新的機會。
+        </p>
+
+        <h3 class="text-base sm:text-lg font-bold text-emerald-800 mb-4">持續探索的方向包括：</h3>
+
+        <div class="space-y-4">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">情緒調節與焦慮管理</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">探索創意及沉浸式介入方式，如何協助提升情緒覺察，以及支援焦慮的調適與管理。</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">沉浸式及體驗式科技</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">研究虛擬環境及互動數碼體驗，如何與現有的心理及治療方法互相配合。</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">心理健康的創意取向</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">探索戲劇治療、身體經驗、創意表達與新興科技之間的關係，以及它們在心理健康支援方面的應用潛力。</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">應用研究與項目開發</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">連結學術知識與實際應用，將研究成果與個人、專業工作者及社群的真實需要相結合。</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed mt-6">
+          以上方向仍處於持續探索與發展階段。我們期望透過跨領域協作，讓不同理念得以進一步探索、評估及負責任地發展。
+        </p>
+      </div>
+
+      <!-- Box 4: Working Together -->
+      <div class="bg-purple-50/30 p-8 sm:p-10 rounded-3xl border border-purple-100/60 shadow-lg shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">攜手合作</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            我們歡迎大學、學術研究人員、科技開發者、醫療專業人士、慈善團體及不同機構與我們交流，共同探索創新的心理健康支援方式。
+          </p>
+          <p>
+            我們尤其期待能夠結合不同領域專長的合作項目，將臨床及治療專業視角，與學術研究、科技創新及實際應用互相結合。
+          </p>
+          <p>
+            無論你有意探討研究合作、共同開發項目、尋求資助機會，還是希望交流一個共同關注的構想，我們都歡迎與你聯絡，進一步探索合作的可能。
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 5: Looking Towards What Is Possible / CTA -->
+      <div class="bg-gradient-to-br from-emerald-50 via-purple-50/30 to-slate-50 p-8 sm:p-10 rounded-3xl border border-emerald-100 shadow-xl shadow-slate-100 text-center scroll-animate">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">探索更多可能</h2>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mb-8">
+          我們相信，創新是一個持續探索、反思與協作的過程。透過結合治療專業知識、創意實踐及新興科技，我們期望為理解及支援情緒健康開拓更多途徑，並為心理治療及身心健康服務的未來發展帶來新的可能。
+        </p>
+
+        <div class="pt-6 border-t border-emerald-200/60">
+          <h3 class="text-lg font-bold text-emerald-900 mb-2">有興趣與我們合作嗎？</h3>
+          <p class="text-xs sm:text-sm text-gray-600 mb-6">歡迎就研究、跨界合作及未來發展項目與我們聯絡。</p>
+          <a href="zh-contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white bg-gradient-btn shadow-lg hover:opacity-95 transition font-semibold text-sm">
+            聯絡我們
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <footer class="bg-sky-50/80 text-gray-600 py-12 border-t text-center text-xs">
+  <!-- Footer -->
+  <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
     <p>&copy; 2026 戲劇治療灣有限公司 | 電話：01223 912627 | 電郵：dramatherapybay@gmail.com</p>
   </footer>
+
+  <!-- Scroll Animation Script & Mobile Menu Toggle -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.scroll-animate').forEach(el => el.classList.add('is-visible'));
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
     });
-    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+
+    // Mobile Navigation Toggle
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
