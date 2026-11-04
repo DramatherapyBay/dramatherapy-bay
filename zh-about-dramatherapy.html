@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於戲劇治療 - 戲劇治療灣有限公司</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .bg-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #F0FDF4 50%, #FAF5FF 100%); }
 
+    /* Scroll Animation Transition States */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      will-change: opacity, transform;
+    }
+    .scroll-animate.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="zh-index.html" class="flex items-center gap-2.5 shrink-0">
+        <img src="Untitled design (2).png" alt="Dramatherapy Bay Logo" class="h-14 sm:h-16 w-auto object-contain py-1">
+        <div>
+          <span class="text-base sm:text-lg font-bold text-gray-900 tracking-tight block leading-none">戲劇治療灣</span>
+          <span class="text-[10px] text-gray-500 font-medium">有限公司</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-2.5 lg:gap-4 text-xs lg:text-sm font-semibold text-gray-600">
+        <a href="zh-index.html" class="hover:text-emerald-600 transition whitespace-nowrap">主頁</a>
+        <a href="zh-about-dramatherapy.html" class="text-emerald-600 font-bold whitespace-nowrap">關於戲劇治療</a>
+        <a href="zh-about-lily.html" class="hover:text-emerald-600 transition whitespace-nowrap">關於 Lily</a>
+        <a href="zh-services.html" class="hover:text-emerald-600 transition">服務</a>
+        <a href="zh-innovation.html" class="hover:text-emerald-600 transition">創新發展</a>
+        <a href="zh-resources.html" class="hover:text-emerald-600 transition">資源</a>
+        <a href="zh-contact.html" class="hover:text-emerald-600 transition whitespace-nowrap">聯絡我們</a>
+        <span class="text-gray-300">|</span>
+        <a href="about-dramatherapy.html" class="text-gray-500 hover:text-emerald-600 transition font-bold">EN</a>
+      </nav>
+      
+      <a href="zh-contact.html" class="hidden sm:inline-flex shrink-0 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-gradient-btn shadow-md hover:opacity-95 transition whitespace-nowrap">預約諮詢</a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" aria-label="切換導航選單" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-emerald-600 hover:bg-slate-100 transition">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
+      <a href="zh-index.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">主頁</a>
+      <a href="zh-about-dramatherapy.html" class="block py-2 text-base font-bold text-emerald-600">關於戲劇治療</a>
+      <a href="zh-about-lily.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於 Lily</a>
+      <a href="zh-services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">服務</a>
+      <a href="zh-innovation.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">創新發展</a>
+      <a href="zh-resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">資源</a>
+      <a href="zh-contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">聯絡我們</a>
+      <div class="pt-2 border-t border-gray-100 flex items-center gap-3">
+        <span class="text-xs text-gray-500 font-medium">切換語言：</span>
+        <a href="about-dramatherapy.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">English</a>
+      </div>
+      <a href="zh-contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">預約諮詢</a>
+    </div>
+  </header>
+
+  <main class="bg-calm-gradient py-12 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+      <!-- What is Dramatherapy Section -->
+      <section class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 scroll-animate">
+        <div class="text-center mb-8">
+          <span class="text-emerald-600 font-bold text-xs tracking-wider uppercase bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">治療取向</span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3">甚麼是 <span class="text-gradient">戲劇治療？</span></h1>
+        </div>
+
+        <div class="space-y-4 text-gray-600 text-base leading-relaxed">
+          <p>
+            戲劇治療是一種心理治療方式，透過創意、想像、遊戲及多元表達媒介，協助我們認識自己、理解自身經歷，以及探索內在的感受與需要。
+          </p>
+          <p>
+            雖然稱為「戲劇治療」，但你並不需要懂得演戲、喜歡表演，或具備任何藝術方面的技巧。治療過程中亦沒有任何表演要求，你不需要在任何人面前演出，也不需要創作出符合特定標準的作品。
+          </p>
+          <p>
+            戲劇治療的核心，是透過不同方式探索生活中正在發生的事情、我們的感受，以及我們如何看待自己和與他人相處。
+          </p>
+          <p>
+            有時候，要透過言語談論自己的經歷並不容易。我們可能難以找到合適的詞語表達感受，被強烈的情緒淹沒，或不斷重複相同的思考模式，卻未能真正理解背後的原因。
+          </p>
+          <p>
+            戲劇治療提供了另一種探索這些經歷的途徑。透過想像、意象、物件、故事及創意活動，我們可以逐漸表達那些單靠對話未必容易傳達的感受與經歷，並從中發展新的理解與觀點。
+          </p>
+        </div>
+      </section>
+
+      <!-- A Holistic Approach to Healing Section -->
+      <section class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 space-y-8 scroll-animate">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4 text-center">以整體為本的 <span class="text-gradient">治療方式</span></h2>
+          <div class="space-y-4 text-gray-600 text-base leading-relaxed">
+            <p>
+              戲劇治療不單著重思想與言語表達，亦重視身體經驗、情緒、想像力及個人的內在世界，讓人在治療過程中有機會從不同層面認識自己，探索內在經歷，並發掘新的理解與可能性。
+            </p>
+            <p>
+              透過創意活動、遊戲及故事探索等方式，參與者可以在具支持性的治療關係中，以自己的步伐接觸及探索較為困難的情緒、生命經歷與人際關係，逐步提升自我覺察。
+            </p>
+            <p>
+              這種治療方式運用多元創意技巧，例如角色扮演、即興創作、故事敘述及創意身體活動，讓參與者在治療師的引導及陪伴下，以適合自己的方式探索內在經驗。
+            </p>
+            <p>
+              整個治療過程由具備專業資格及註冊認可的治療師帶領，並透過協作、尊重及接納，建立一個安全且具支持性的治療空間。
+            </p>
+          </div>
+        </div>
+
+        <!-- Light Bright Soft Color Feature Box for Evidence-Based Practice -->
+        <div class="bg-gradient-to-r from-emerald-50/80 via-teal-50/50 to-purple-50/50 border border-emerald-100/80 p-6 rounded-2xl shadow-sm text-center">
+          <h3 class="text-xs font-bold text-emerald-700 uppercase tracking-widest mb-2">專業實踐與研究基礎</h3>
+          <p class="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-2xl mx-auto">
+            戲劇治療是一門受專業規管的心理治療專業。在英國，戲劇治療師須向健康與護理專業委員會（Health and Care Professions Council，HCPC）註冊，方可使用受規管的專業職銜。戲劇治療廣泛應用於不同服務環境，包括醫院、學校、社區服務及私人執業，並因應不同群體的需要而發展出多元化的治療實踐。
+          </p>
+
+          <div class="mt-4 pt-4 border-t border-emerald-100/60 flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-gray-600">
+            <span class="bg-white px-3 py-1 rounded-full shadow-2xs border border-emerald-100">HCPC 專業規管</span>
+            <span class="text-emerald-400">•</span>
+            <span class="bg-white px-3 py-1 rounded-full shadow-2xs border border-emerald-100">以專業實踐及研究為基礎</span>
+            <span class="text-emerald-400">•</span>
+            <span class="bg-white px-3 py-1 rounded-full shadow-2xs border border-emerald-100">獲國際專業團體認可</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Therapeutic Techniques (Grid Cards) -->
+      <section class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 scroll-animate">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2 text-center">常見的 <span class="text-gradient">治療技巧</span></h2>
+        <p class="text-xs sm:text-sm text-gray-500 text-center mb-6">戲劇治療會因應個人的需要、治療目標及當下的狀態，靈活運用不同創意媒介。以下是一些常見的探索方式：</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">角色扮演</h3>
+            <p class="text-xs text-gray-600">透過探索不同角色及處境，從多角度理解自己與他人的經歷，並嘗試以不同方式回應生活中的情況。</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">故事敘述</h3>
+            <p class="text-xs text-gray-600">透過創作、重述及探索故事，梳理個人經歷、情緒及生命中的意義。</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">身體動作與表達</h3>
+            <p class="text-xs text-gray-600">運用身體動作及非言語表達，探索身體感受、情緒與自我覺察之間的連結。</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">創意寫作</h3>
+            <p class="text-xs text-gray-600">透過文字、書寫及內心對話，整理和表達思想與感受，讓較難理解的內在經驗得以呈現及探索。</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">沙盤及繪畫</h3>
+            <p class="text-xs text-gray-600">運用沙盤、圖像及象徵性創作，呈現內在世界、感受及難以言喻的經歷。</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">隱喻與即興創作</h3>
+            <p class="text-xs text-gray-600">透過象徵、想像及即興探索，發掘新的觀點，培養彈性思考及對自身經驗的理解。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who Can Benefit? (Checklist) -->
+      <section class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 scroll-animate">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2">誰適合接受戲劇治療？</h2>
+          <p class="text-sm text-gray-600 max-w-2xl mx-auto">戲劇治療可支援不同年齡及背景的人士，特別是正在面對情緒、心理、人際關係或生活轉變等挑戰的人。治療方向及介入方式會因應每個人的需要、能力及個別情況而調整。</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
+          <div class="space-y-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>成癮復康及戒癮支援</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>焦慮及抑鬱情緒</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>專注力不足／過度活躍症（ADHD）及自閉症譜系相關需要</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>喪親、失落及哀傷歷程</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>認知功能障礙及失智症支援</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>溝通及表達方面的困難</span></div>
+          </div>
+          <div class="space-y-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>飲食困難及飲食失調</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>學習障礙及相關支援需要</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>人生轉變及適應困難</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>人格障礙及相關情緒與人際關係困難</span></div>
+            <div class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold text-base">✓</span> <span>創傷經歷及創傷後壓力症（PTSD）</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Recognition Section (Moved to Bottom) -->
+      <section class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 text-center space-y-2 scroll-animate">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">專業認可與規管</h4>
+        <p class="text-xs text-gray-500 max-w-xl mx-auto leading-relaxed">
+          戲劇治療在不同國家及地區均有其專業發展及認可制度。在英國，戲劇治療師受健康與護理專業委員會（HCPC）規管，並有英國戲劇治療師協會（BADth）等專業組織支持業界發展及專業實踐。在北美，北美戲劇治療協會（NADTA）亦致力推動戲劇治療的專業發展、教育及研究。
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
+    <p>&copy; 2026 戲劇治療灣有限公司 | 電話：01223 912627 | 電郵：dramatherapybay@gmail.com</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
+    });
+
+    // Mobile Navigation Toggle
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
