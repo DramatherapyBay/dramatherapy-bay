@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我們的服務 - 戲劇治療灣有限公司</title>
+  <title>創新、研究與合作 - 戲劇治療灣有限公司</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] } } } }
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+        }
+      }
+    }
   </script>
   <style>
-    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
-    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .bg-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #F0FDF4 50%, #FAF5FF 100%); }
-
-    /* Scroll Animation Transition States */
     .scroll-animate {
       opacity: 0;
       transform: translateY(30px);
@@ -24,10 +28,15 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .bg-gradient-btn { background: linear-gradient(135deg, #10B981 0%, #A855F7 100%); }
+    .text-gradient { background: linear-gradient(135deg, #059669 0%, #7C3AED 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .bg-blue-calm-gradient { background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 50%, #EEF2FF 100%); }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
+  <!-- Header / Navigation -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="zh-index.html" class="flex items-center gap-2.5 shrink-0">
@@ -37,17 +46,20 @@
           <span class="text-[10px] text-gray-500 font-medium">有限公司</span>
         </div>
       </a>
+
+      <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-2.5 lg:gap-4 text-xs lg:text-sm font-semibold text-gray-600">
         <a href="zh-index.html" class="hover:text-emerald-600 transition whitespace-nowrap">主頁</a>
         <a href="zh-about-dramatherapy.html" class="hover:text-emerald-600 transition whitespace-nowrap">關於戲劇治療</a>
         <a href="zh-about-lily.html" class="hover:text-emerald-600 transition whitespace-nowrap">關於 Lily</a>
-        <a href="zh-services.html" class="text-emerald-600 font-bold whitespace-nowrap">服務</a>
-        <a href="zh-innovation.html" class="hover:text-emerald-600 transition whitespace-nowrap">創新發展</a>
-        <a href="zh-resources.html" class="hover:text-emerald-600 transition whitespace-nowrap">資源</a>
+        <a href="zh-services.html" class="hover:text-emerald-600 transition">服務</a>
+        <a href="zh-innovation.html" class="text-emerald-600 font-bold whitespace-nowrap">創新發展</a>
+        <a href="zh-resources.html" class="hover:text-emerald-600 transition">資源</a>
         <a href="zh-contact.html" class="hover:text-emerald-600 transition whitespace-nowrap">聯絡我們</a>
         <span class="text-gray-300">|</span>
-        <a href="./services.html" class="text-gray-500 hover:text-emerald-600 transition font-bold">EN</a>
+        <a href="innovation.html" class="text-gray-500 hover:text-emerald-600 transition font-bold">EN</a>
       </nav>
+
       <a href="zh-contact.html" class="hidden sm:inline-flex shrink-0 px-3.5 py-2 rounded-full text-xs font-bold text-white bg-gradient-btn shadow-md hover:opacity-95 transition whitespace-nowrap">預約諮詢</a>
 
       <!-- Mobile Hamburger Button -->
@@ -63,168 +75,170 @@
       <a href="zh-index.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">主頁</a>
       <a href="zh-about-dramatherapy.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於戲劇治療</a>
       <a href="zh-about-lily.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">關於 Lily</a>
-      <a href="zh-services.html" class="block py-2 text-base font-bold text-emerald-600">服務</a>
-      <a href="zh-innovation.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">創新發展</a>
+      <a href="zh-services.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">服務</a>
+      <a href="zh-innovation.html" class="block py-2 text-base font-bold text-emerald-600">創新發展</a>
       <a href="zh-resources.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">資源</a>
       <a href="zh-contact.html" class="block py-2 text-base font-semibold text-gray-600 hover:text-emerald-600">聯絡我們</a>
       <div class="pt-2 border-t border-gray-100 flex items-center gap-3">
         <span class="text-xs text-gray-500 font-medium">切換語言：</span>
-        <a href="./services.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">English</a>
+        <a href="innovation.html" class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">English</a>
       </div>
       <a href="zh-contact.html" class="block text-center mt-4 px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-gradient-btn shadow-md">預約諮詢</a>
     </div>
   </header>
 
-  <main class="bg-calm-gradient py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Main Header -->
-    <div class="text-center max-w-3xl mx-auto mb-10 scroll-animate">
-      <h1 class="text-4xl font-extrabold text-gray-900 mb-3">我們的 <span class="text-gradient">服務</span></h1>
-      <p class="text-gray-600 text-base leading-relaxed mb-6">
-        以戲劇治療及創意心理支援，陪伴你探索自我、面對挑戰，並促進個人成長與情緒健康。
-      </p>
-      
-      <h2 class="text-2xl font-bold text-gray-900 mb-2">核心服務</h2>
-      <p class="text-gray-600 text-sm">
-        我們提供多元化的專業戲劇治療及創意支援服務，並會因應每個人的需要、目標及實際情況，度身調整合適的服務方式。
+  <!-- Page Hero Header -->
+  <section class="py-16 lg:py-20 bg-gradient-to-b from-slate-50 to-white text-center scroll-animate">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        創新、研究與 <span class="text-gradient">合作</span>
+      </h1>
+      <p class="text-emerald-700 font-bold text-base sm:text-xl max-w-3xl mx-auto">
+        探索治療、創意與科技交匯之處的嶄新可能
       </p>
     </div>
+  </section>
 
-    <!-- Four Main Categories in a Clean Grid (Same level layout) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 scroll-animate">
-      
-      <!-- Category 1 -->
-      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-emerald-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
-        <div>
-          <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-emerald-50">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="個人及團體戲劇治療" class="w-full h-full object-cover">
+  <!-- Main Content Cards -->
+  <main class="py-12 bg-blue-calm-gradient min-h-screen">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+      <!-- Box 1: Core Vision -->
+      <div class="bg-slate-50/80 p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-lg shadow-slate-100 scroll-animate">
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            在戲劇治療灣，我們相信，心理支援不應局限於既有的方法，而應持續保持開放，接納新的理念、觀點及可能性。
+          </p>
+          <p>
+            除了日常的治療工作外，我們亦積極探索創意取向、沉浸式科技及新興數碼工具，如何為情緒健康及心理支援帶來更多可能。
+          </p>
+          <p>
+            我們關注的並非以科技取代人與人之間的連結，而是探索科技如何成為額外的輔助途徑，讓人們有更多機會接觸及理解自身經歷、提升情緒覺察，並探索與自己及周遭世界相處的不同方式。
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 2: Virtual Reality -->
+      <div class="bg-emerald-50/40 p-8 sm:p-10 rounded-3xl border border-emerald-100/60 shadow-lg shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">探索虛擬實境於治療中的應用</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            我們正探索如何將虛擬實境（Virtual Reality，VR）作為輔助資源，應用於不同的治療情境之中。
+          </p>
+          <p>
+            在合適的情況下，治療師可於治療過程中引入引導式 VR 體驗，作為一項自願參與的輔助工具。無論是戲劇治療、飲食失調認知行為治療（CBT-T），還是引導式自助治療（GSH），我們均關注沉浸式體驗如何創造更多探索機會，例如提升感官覺察、練習身心安定、促進放鬆，以及探索情緒調節的方式。
+          </p>
+          <p>
+            我們明白，科技輔助並非適合所有人。因此，是否採用 VR，必須考慮個人的需要、意願、使用便利性及臨床適用性，並以治療關係作為整個治療過程的核心。
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 3: Academic Collaboration & Research Areas -->
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">學術協作與項目發展</h2>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
+          我們正透過與學術合作夥伴的交流及協作，逐步拓展這方面的探索，尋求結合心理治療實踐、學術研究與科技創新的機會。
+        </p>
+
+        <h3 class="text-base sm:text-lg font-bold text-emerald-800 mb-4">持續探索的方向包括：</h3>
+
+        <div class="space-y-4">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">情緒調節與焦慮管理</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">探索創意及沉浸式介入方式，如何協助提升情緒覺察，以及支援焦慮的調適與管理。</p>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">個人及團體戲劇治療</h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            透過創意方式進行心理治療，探索情緒困擾、梳理困難經歷，並促進自我理解及心理成長。
-          </p>
-          <ul class="text-xs text-emerald-800 space-y-1 mb-6 font-medium bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/40">
-            <li>• <strong>個人治療：</strong> 每節 50 分鐘，一對一形式，可選擇面談、網上或電話進行。</li>
-            <li>• <strong>團體治療：</strong> 每節 90 分鐘，每組最多 6 人。</li>
-          </ul>
-        </div>
-        <a href="zh-contact.html" class="w-full text-center py-3 rounded-full bg-emerald-50 text-emerald-700 font-bold text-sm hover:bg-emerald-100 transition">查詢服務 &rarr;</a>
-      </div>
 
-      <!-- Category 2 -->
-      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-purple-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
-        <div>
-          <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-purple-50">
-            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="創意身心健康工作坊及培訓" class="w-full h-full object-cover">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">沉浸式及體驗式科技</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">研究虛擬環境及互動數碼體驗，如何與現有的心理及治療方法互相配合。</p>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">創意身心健康工作坊及培訓</h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            為大學, 學校、教育機構及不同組織度身設計創意工作坊及體驗式學習活動。
-          </p>
-          <p class="text-xs text-purple-900 italic font-semibold mb-6 bg-purple-50/60 p-4 rounded-xl border border-purple-100">
-            「工作坊可根據參與對象、活動目標、團體人數及可用時間作靈活設計，形式由單次活動至較長期的系列計劃均可。」
-          </p>
-        </div>
-        <a href="zh-contact.html" class="w-full text-center py-3 rounded-full bg-purple-50 text-purple-700 font-bold text-sm hover:bg-purple-100 transition">查詢服務 &rarr;</a>
-      </div>
 
-      <!-- Category 3 -->
-      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-blue-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
-        <div>
-          <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-blue-50">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="專業發展及創意教練支援" class="w-full h-full object-cover">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">心理健康的創意取向</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">探索戲劇治療、身體經驗、創意表達與新興科技之間的關係，以及它們在心理健康支援方面的應用潛力。</p>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">專業發展及創意教練支援</h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            透過結構化的一對一教練形式，結合創意技巧，協助個人發掘自身潛能、面對職涯轉變、釐清目標及規劃未來方向。每節 60 分鐘。
-          </p>
-          <p class="text-xs text-gray-500 mb-6 bg-gray-50 p-4 rounded-xl">
-            服務性質： 著重目標實踐、個人發展及專業成長，並非心理治療服務。
-          </p>
-        </div>
-        <a href="zh-contact.html" class="w-full text-center py-3 rounded-full bg-blue-50 text-blue-700 font-bold text-sm hover:bg-blue-100 transition">查詢服務 &rarr;</a>
-      </div>
 
-      <!-- Category 4 -->
-      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-amber-100/60 shadow-sm flex flex-col justify-between hover:shadow-md transition">
-        <div>
-          <div class="h-40 rounded-2xl overflow-hidden mb-6 bg-amber-50">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="度身設計項目及合作計劃" class="w-full h-full object-cover">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-100">
+            <h4 class="font-bold text-gray-900 text-sm sm:text-base mb-1">應用研究與項目開發</h4>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">連結學術知識與實際應用，將研究成果與個人、專業工作者及社群的真實需要相結合。</p>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">度身設計項目及合作計劃</h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            與教育機構、慈善團體及社區組織共同策劃創意項目、社區外展活動及度身設計的身心健康計劃。
+        </div>
+
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed mt-6">
+          以上方向仍處於持續探索與發展階段。我們期望透過跨領域協作，讓不同理念得以進一步探索、評估及負責任地發展。
+        </p>
+      </div>
+
+      <!-- Box 4: Working Together -->
+      <div class="bg-purple-50/30 p-8 sm:p-10 rounded-3xl border border-purple-100/60 shadow-lg shadow-slate-100 scroll-animate">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-4">攜手合作</h2>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+          <p>
+            我們歡迎大學、學術研究人員、科技開發者、醫療專業人士、慈善團體及不同機構與我們交流，共同探索創新的心理健康支援方式。
           </p>
-          <p class="text-xs text-amber-900 font-medium mb-6 bg-amber-50/60 p-4 rounded-xl border border-amber-100">
-            有意發展合作項目或社區計劃？歡迎與我們交流想法，共同探索合作可能。
+          <p>
+            我們尤其期待能夠結合不同領域專長的合作項目，將臨床及治療專業視角，與學術研究、科技創新及實際應用互相結合。
+          </p>
+          <p>
+            無論你有意探討研究合作、共同開發項目、尋求資助機會，還是希望交流一個共同關注的構想，我們都歡迎與你聯絡，進一步探索合作的可能。
           </p>
         </div>
-        <a href="zh-contact.html" class="w-full text-center py-3 rounded-full bg-amber-50 text-amber-700 font-bold text-sm hover:bg-amber-100 transition">洽談合作 &rarr;</a>
       </div>
 
-    </div>
+      <!-- Box 5: Looking Towards What Is Possible / CTA -->
+      <div class="bg-gradient-to-br from-emerald-50 via-purple-50/30 to-slate-50 p-8 sm:p-10 rounded-3xl border border-emerald-100 shadow-xl shadow-slate-100 text-center scroll-animate">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">探索更多可能</h2>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto mb-8">
+          我們相信，創新是一個持續探索、反思與協作的過程。透過結合治療專業知識、創意實踐及新興科技，我們期望為理解及支援情緒健康開拓更多途徑，並為心理治療及身心健康服務的未來發展帶來新的可能。
+        </p>
 
-    <!-- Centered Specialized Treatment Section -->
-    <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border border-emerald-100/80 shadow-sm text-center scroll-animate">
-      <div class="max-w-2xl mx-auto mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-2">飲食失調專業治療</h2>
-        <p class="text-sm text-gray-600 leading-relaxed">以整合方式支援飲食失調的康復歷程。我們採用多元而互相配合的治療方式，結合三種不同的治療取向，為面對飲食困難及飲食失調的人士提供個人化心理支援。治療並非以減重為目標，而是著重協助個人逐步建立更健康、更具接納性的飲食模式，以及與食物、身體和自我的關係。透過有系統的支援、治療探索及實際可行的策略，我們希望協助個人理解及處理與飲食失調相關的情緒、心理及行為困難，逐步邁向康復。</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
-        <div class="bg-slate-50/80 p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-2">戲劇治療（Dramatherapy）</h3>
-          <p class="text-xs font-semibold text-emerald-700 mb-2">治療時間及歷程因應個人需要而定</p>
-          <p class="text-sm text-gray-600 leading-relaxed">透過創意、想像、身體動作、故事、角色扮演及象徵性表達，探索那些未必容易以言語表達的情緒與經歷。戲劇治療可以協助個人提升情緒覺察、加深自我理解，探索身體形象及身份認同，並發掘與自己及他人相處的不同可能。</p>
-        </div>
-        <div class="bg-slate-50/80 p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-2">飲食失調認知行為治療（CBT-T）</h3>
-          <p class="text-xs font-semibold text-emerald-700 mb-2">有結構的循證治療取向 · 通常為十節</p>
-          <p class="text-sm text-gray-600 leading-relaxed">CBT-T 是一種具結構及研究基礎的治療方式，協助個人理解及處理影響和維持飲食困難的思想、信念、情緒與行為模式。治療過程會探索並逐步挑戰與食物、體重、身體形象及自我價值有關的不利信念及慣常思考模式。治療亦著重建立規律的飲食習慣，以及發展更健康的情緒調適及應對策略。通常會鼓勵參與者在兩節治療之間完成相關練習或課後任務，將治療中學到的技巧應用於日常生活。</p>
-        </div>
-        <div class="bg-slate-50/80 p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <h3 class="font-bold text-gray-900 mb-2">引導式自助治療（Guided Self-Help，GSH）</h3>
-          <p class="text-xs font-semibold text-emerald-700 mb-2">有系統的支援方式 · 通常為 10–12 節</p>
-          <p class="text-sm text-gray-600 leading-relaxed">透過具研究基礎的自助教材，配合定期的治療指導、跟進及鼓勵，協助個人逐步理解自己的飲食困難。治療會著重建立較穩定及規律的飲食模式、追蹤個人進展，並透過循序漸進及可實踐的小步驟，逐步作出改變。</p>
+        <div class="pt-6 border-t border-emerald-200/60">
+          <h3 class="text-lg font-bold text-emerald-900 mb-2">有興趣與我們合作嗎？</h3>
+          <p class="text-xs sm:text-sm text-gray-600 mb-6">歡迎就研究、跨界合作及未來發展項目與我們聯絡。</p>
+          <a href="zh-contact.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-white bg-gradient-btn shadow-lg hover:opacity-95 transition font-semibold text-sm">
+            聯絡我們
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
         </div>
       </div>
 
-      <!-- Virtual Reality (VR) in Therapeutic Practice Section -->
-      <div class="bg-emerald-50/50 p-6 sm:p-8 rounded-2xl border border-emerald-100 mb-8 shadow-sm">
-        <h3 class="font-bold text-gray-900 text-lg mb-3 text-center">虛擬實境（VR）於治療中的應用</h3>
-        <div class="space-y-3 text-sm text-gray-600 leading-relaxed text-left">
-          <p>我們關注沉浸式科技如何與心理治療及創意治療方式互相配合，並持續探索虛擬實境（Virtual Reality，VR）在治療實踐中的應用潛力。</p>
-          <p>在合適的情況下，治療師可按個人需要，將引導式 VR 體驗作為可選擇的輔助工具，融入治療過程之中。這項工具可配合不同治療取向使用，包括戲劇治療、飲食失調認知行為治療（CBT-T）及引導式自助治療（GSH）。</p>
-          <p>視乎個人的需要及治療目標，VR 體驗或可提供額外的探索機會，協助個人留意感官經驗、練習安定身心、促進放鬆，以及探索情緒調節的方式。</p>
-          <p>是否使用 VR，會與每位服務使用者事先討論，並根據其個人喜好、適用性及舒適程度作個別考慮。VR 並非獨立的治療方式，亦不會取代治療關係或原有的治療取向，而是按需要選用的輔助資源。</p>
-        </div>
-      </div>
-
-      <div class="bg-gradient-to-r from-emerald-50 via-purple-50/40 to-emerald-50 p-6 rounded-2xl border border-emerald-100 text-center shadow-sm">
-        <h4 class="font-bold text-gray-900 mb-1">整合式飲食失調治療</h4>
-        <p class="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">我們的飲食失調治療結合戲劇治療的創意探索、認知行為治療的結構化介入，以及引導式自助的持續支援，讓不同治療方式能因應個人需要互相配合。透過兼顧情緒、心理及行為層面的支援，協助個人逐步建立更健康的飲食習慣，改善與身體及自我的關係，並朝著康復方向前進。</p>
-      </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-sky-50/80 backdrop-blur-md text-gray-600 py-12 border-t border-sky-100 text-center text-xs">
     <p>&copy; 2026 戲劇治療灣有限公司 | 電話：01223 912627 | 電郵：dramatherapybay@gmail.com</p>
   </footer>
 
+  <!-- Scroll Animation Script & Mobile Menu Toggle -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
           }
         });
-      }, { threshold: 0.15 });
+      }, observerOptions);
 
-      document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+      document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+      });
     });
 
+    // Mobile Navigation Toggle
     document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
     });
   </script>
 </body>
