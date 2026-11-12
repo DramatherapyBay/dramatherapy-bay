@@ -1,3 +1,8 @@
+Yes, that is the right code! The issue is caused by the `whitespace-nowrap` class on that heading, which forces the text to stay on a single line instead of wrapping onto smaller screens, causing it to clip off the right edge.
+
+Here is the entire updated file with `whitespace-nowrap` removed and replaced with standard responsive text wrapping (`text-balance` / normal flow), so it fits cleanly on mobile screens.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,7 +163,7 @@
         <!-- Right Column: Story Text -->
         <div class="lg:col-span-8 space-y-4">
           <h2 class="text-xs font-extrabold uppercase tracking-widest text-emerald-600 bg-emerald-100/80 px-3 py-1 rounded-full inline-block">The Story Behind Dramatherapy Bay</h2>
-          <h3 class="text-base sm:text-xl md:text-2xl font-extrabold text-gray-900 whitespace-nowrap">A bay to pause. A space to explore. A way forward.</h3>
+          <h3 class="text-base sm:text-xl md:text-2xl font-extrabold text-gray-900">A bay to pause. A space to explore. A way forward.</h3>
           <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
             A bay is a sheltered place where boats can find a moment of calm, take refuge from the open water and prepare for their next journey.
           </p>
@@ -356,3 +361,5 @@
   </script>
 </body>
 </html>
+
+```
